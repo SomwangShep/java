@@ -1,0 +1,6 @@
+if you are getting 
+fatal: Not a git repository (or any of the parent directories): .git
+error make sure to do below line
+somwang:~/workspace $ git init
+before you do 
+git remote add origin git@github.com:SomwangShep/java.git
