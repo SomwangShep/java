@@ -1,0 +1,785 @@
+somwang:~/workspace $ git remote add origin git@github.com:SomwangShep/java.git
+fatal: Not a git repository (or any of the parent directories): .git
+somwang:~/workspace $ git remote -v
+fatal: Not a git repository (or any of the parent directories): .git
+somwang:~/workspace $ git starus
+git: 'starus' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+somwang:~/workspace $ gitstatus
+bash: gitstatus: command not found
+somwang:~/workspace $ git status
+fatal: Not a git repository (or any of the parent directories): .git
+somwang:~/workspace $ ls
+Gemfile       README.md    Rakefile  bin/     config.ru  lib/  public/  tmp/
+Gemfile.lock  README.rdoc  app/      config/  db/        log/  test/    vendor/
+somwang:~/workspace $ cd java
+bash: cd: java: No such file or directory
+somwang:~/workspace $ cd..
+bash: cd..: command not found
+somwang:~/workspace $ cd ..
+somwang:~ $ ls
+check-environment*  lib/  workspace/
+somwang:~ $ cd workspace
+somwang:~/workspace $ git init
+Initialized empty Git repository in /home/ubuntu/workspace/.git/
+somwang:~/workspace (master) $ git remote add origin git@github.com:SomwangShep/java.git
+somwang:~/workspace (master) $ git remote -v
+origin  git@github.com:SomwangShep/java.git (fetch)
+origin  git@github.com:SomwangShep/java.git (push)
+somwang:~/workspace (master) $ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'git@github.com:SomwangShep/java.git'
+somwang:~/workspace (master) $ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'git@github.com:SomwangShep/java.git'
+somwang:~/workspace (master) $ git version
+git version 2.11.0
+somwang:~/workspace (master) $ git config --global user.name "SomwangShep"
+somwang:~/workspace (master) $ git config --global user.email "ss1792@mcla.edu"
+somwang:~/workspace (master) $ git remote add origin git@github.com:SomwangShep/java.git
+fatal: remote origin already exists.
+somwang:~/workspace (master) $ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        Doc.txt
+        Gemfile
+        Gemfile.lock
+        README.md
+        README.rdoc
+        Rakefile
+        app/
+        bin/
+        config.ru
+        config/
+        db/
+        lib/
+        log/
+        public/
+        test/
+        vendor/
+
+nothing added to commit but untracked files present (use "git add" to track)
+somwang:~/workspace (master) $ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+somwang:~/workspace (master) $ git add .
+somwang:~/workspace (master) $ git commit -m "First comit"
+[master (root-commit) ae224f4] First comit
+ 111 files changed, 2654 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Doc.txt
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.md
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/images/favicon.ico
+ create mode 100644 app/assets/images/profile.jpeg
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/javascripts/comments.coffee
+ create mode 100644 app/assets/javascripts/pages.coffee
+ create mode 100644 app/assets/javascripts/posts.coffee
+ create mode 100644 app/assets/stylesheets/_normalize.css.scss
+ create mode 100644 app/assets/stylesheets/application.css.scss
+ create mode 100644 app/assets/stylesheets/comments.scss
+ create mode 100644 app/assets/stylesheets/pages.scss
+ create mode 100644 app/assets/stylesheets/posts.scss
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/comments_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/controllers/pages_controller.rb
+ create mode 100644 app/controllers/posts_controller.rb
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/helpers/comments_helper.rb
+ create mode 100644 app/helpers/pages_helper.rb
+ create mode 100644 app/helpers/posts_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/comment.rb
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/models/post.rb
+ create mode 100644 app/models/user.rb
+ create mode 100644 app/views/comments/_comment.html.erb
+ create mode 100644 app/views/comments/_form.html.erb
+ create mode 100644 app/views/devise/confirmations/new.html.erb
+ create mode 100644 app/views/devise/mailer/confirmation_instructions.html.erb
+ create mode 100644 app/views/devise/mailer/reset_password_instructions.html.erb
+ create mode 100644 app/views/devise/mailer/unlock_instructions.html.erb
+ create mode 100644 app/views/devise/passwords/edit.html.erb
+ create mode 100644 app/views/devise/passwords/new.html.erb
+ create mode 100644 app/views/devise/registrations/edit.html.erb
+ create mode 100644 app/views/devise/registrations/new.html.erb
+ create mode 100644 app/views/devise/sessions/new.html.erb
+ create mode 100644 app/views/devise/shared/_links.html.erb
+ create mode 100644 app/views/devise/unlocks/new.html.erb
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/pages/about.html.erb
+ create mode 100644 app/views/posts/_form.html.erb
+ create mode 100644 app/views/posts/edit.html.erb
+ create mode 100644 app/views/posts/index.html.erb
+ create mode 100644 app/views/posts/new.html.erb
+ create mode 100644 app/views/posts/show.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/setup
+ create mode 100755 bin/spring
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/devise.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/devise.en.yml
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 config/secrets.yml
+ create mode 100644 db/migrate/20170617183434_create_posts.rb
+ create mode 100644 db/migrate/20170617204852_create_comments.rb
+ create mode 100644 db/migrate/20170617231922_devise_create_users.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/controllers/comments_controller_test.rb
+ create mode 100644 test/controllers/pages_controller_test.rb
+ create mode 100644 test/controllers/posts_controller_test.rb
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/fixtures/comments.yml
+ create mode 100644 test/fixtures/posts.yml
+ create mode 100644 test/fixtures/users.yml
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/models/comment_test.rb
+ create mode 100644 test/models/post_test.rb
+ create mode 100644 test/models/user_test.rb
+ create mode 100644 test/test_helper.rb
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+somwang:~/workspace (master) $ git remote add origin git@github.com:SomwangShep/java.git
+fatal: remote origin already exists.
+somwang:~/workspace (master) $ git remote add origin https://github.com/SomwangShep/java.git
+fatal: remote origin already exists.
+somwang:~/workspace (master) $ git push -u origin master
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Counting objects: 132, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (119/119), done.
+Writing objects: 100% (132/132), 440.36 KiB | 0 bytes/s, done.
+Total 132 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas: 100% (14/14), done.
+To github.com:SomwangShep/java.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+somwang:~/workspace (master) $ gem install bundler
+Fetching: bundler-1.15.1.gem (100%)
+Successfully installed bundler-1.15.1
+1 gem installed
+somwang:~/workspace (master) $ heroku login
+Enter your Heroku credentials.
+Email: somwang@gmail.com
+Password (typing will be hidden): 
+Logged in as somwang@gmail.com
+somwang:~/workspace (master) $ heroku create
+heroku-cli: Installing CLI... 24.51MB/24.51MB
+Creating app... done, ⬢ safe-plateau-61802
+https://safe-plateau-61802.herokuapp.com/ | https://git.heroku.com/safe-plateau-61802.git
+somwang:~/workspace (master) $ heroku apps:rename javatutorialMCLA
+Renaming safe-plateau-61802 to javatutorialMCLA... !
+ ▸    Name must start with a letter and can only contain lowercase letters, numbers, and
+ ▸    dashes.
+somwang:~/workspace (master) $ heroku apps:rename javatutorial
+Renaming safe-plateau-61802 to javatutorial... !
+ ▸    Name is already taken
+somwang:~/workspace (master) $ heroku apps:rename javatutorial_mcla
+Renaming safe-plateau-61802 to javatutorial_mcla... !
+ ▸    Name must start with a letter and can only contain lowercase letters, numbers, and
+ ▸    dashes.
+somwang:~/workspace (master) $ heroku apps:rename javatutorial-mcla
+Renaming safe-plateau-61802 to javatutorial-mcla... done
+https://javatutorial-mcla.herokuapp.com/ | https://git.heroku.com/javatutorial-mcla.git
+Git remote heroku updated
+ ▸    Don't forget to update git remotes for all other local checkouts of the app.
+somwang:~/workspace (master) $ git push heroku master
+Counting objects: 132, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (119/119), done.
+Writing objects: 100% (132/132), 440.36 KiB | 0 bytes/s, done.
+Total 132 (delta 14), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.3.4
+remote: -----> Installing dependencies using bundler 1.13.7
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Warning: the running version of Bundler (1.13.7) is older than the version that created the lockfile (1.14.4). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        Fetching gem metadata from https://rubygems.org/..........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Installing i18n 0.8.0
+remote:        Installing rake 12.0.0
+remote:        Installing json 1.8.6 with native extensions
+remote:        Installing minitest 5.10.1
+remote:        Installing thread_safe 0.3.5
+remote:        Installing builder 3.2.3
+remote:        Installing erubis 2.7.0
+remote:        Installing mini_portile2 2.1.0
+remote:        Installing rack 1.6.5
+remote:        Installing mime-types-data 3.2016.0521
+remote:        Installing arel 6.0.4
+remote:        Installing bcrypt 3.1.11 with native extensions
+remote:        Installing coffee-script-source 1.12.2
+remote:        Installing execjs 2.7.0
+remote:        Installing thor 0.19.4
+remote:        Installing concurrent-ruby 1.0.4
+remote:        Installing orm_adapter 0.5.0
+remote:        Installing multi_json 1.12.1
+remote:        Using bundler 1.13.7
+remote:        Installing rdoc 4.3.0
+remote:        Installing sass 3.4.23
+remote:        Installing tilt 2.0.6
+remote:        Installing sqlite3 1.3.13 with native extensions
+remote:        Installing turbolinks-source 5.0.0
+remote:        Installing tzinfo 1.2.2
+remote:        Installing rack-test 0.6.3
+remote:        Installing warden 1.2.7
+remote:        Installing mime-types 3.1
+remote:        Installing coffee-script 2.4.1
+remote:        Installing uglifier 3.0.4
+remote:        Installing sprockets 3.7.1
+remote:        Installing nokogiri 1.7.0.1 with native extensions
+remote:        Installing turbolinks 5.0.1
+remote:        Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+remote:        current directory:
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/ruby-2.3.4/bin/ruby -r
+remote:        ./siteconf20170618-276-1ahvt44.rb extconf.rb
+remote:        checking for sqlite3.h... no
+remote:        sqlite3.h is missing. Try 'brew install sqlite3',
+remote:        'yum install sqlite-devel' or 'apt-get install libsqlite3-dev'
+remote:        and check your shared library search path (the
+remote:        location where your sqlite3 shared library is located).
+remote:        *** extconf.rb failed ***
+remote:        Could not create Makefile due to some reason, probably lack of necessary
+remote:        libraries and/or headers.  Check the mkmf.log file for more details.  You may
+remote:        need configuration options.
+remote:        Provided configuration options:
+remote:        --with-opt-dir
+remote:        --without-opt-dir
+remote:        --with-opt-include
+remote:        --without-opt-include=${opt-dir}/include
+remote:        --with-opt-lib
+remote:        --without-opt-lib=${opt-dir}/lib
+remote:        --with-make-prog
+remote:        --without-make-prog
+remote:        --srcdir=.
+remote:        --curdir
+remote:        --ruby=/tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/ruby-2.3.4/bin/$(RUBY_BASE_NAME)
+remote:        --with-sqlite3-config
+remote:        --without-sqlite3-config
+remote:        --with-pkg-config
+remote:        --without-pkg-config
+remote:        --with-sqlite3-dir
+remote:        --without-sqlite3-dir
+remote:        --with-sqlite3-include
+remote:        --without-sqlite3-include=${sqlite3-dir}/include
+remote:        --with-sqlite3-lib
+remote:        --without-sqlite3-lib=${sqlite3-dir}/lib
+remote:        To see why this extension failed to compile, please check the mkmf.log which can
+remote:        be found here:
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/sqlite3-1.3.13/mkmf.log
+remote:        extconf failed, exit code 1
+remote:        Gem files will remain installed in
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13
+remote:        for inspection.
+remote:        Results logged to
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/sqlite3-1.3.13/gem_make.out
+remote:        An error occurred while installing sqlite3 (1.3.13), and Bundler cannot
+remote:        continue.
+remote:        Make sure that `gem install sqlite3 -v '1.3.13'` succeeds before bundling.
+remote:        Bundler Output: Warning: the running version of Bundler (1.13.7) is older than the version that created the lockfile (1.14.4). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        Fetching gem metadata from https://rubygems.org/..........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Installing i18n 0.8.0
+remote:        Installing rake 12.0.0
+remote:        Installing json 1.8.6 with native extensions
+remote:        Installing minitest 5.10.1
+remote:        Installing thread_safe 0.3.5
+remote:        Installing builder 3.2.3
+remote:        Installing erubis 2.7.0
+remote:        Installing mini_portile2 2.1.0
+remote:        Installing rack 1.6.5
+remote:        Installing mime-types-data 3.2016.0521
+remote:        Installing arel 6.0.4
+remote:        Installing bcrypt 3.1.11 with native extensions
+remote:        Installing coffee-script-source 1.12.2
+remote:        Installing execjs 2.7.0
+remote:        Installing thor 0.19.4
+remote:        Installing concurrent-ruby 1.0.4
+remote:        Installing orm_adapter 0.5.0
+remote:        Installing multi_json 1.12.1
+remote:        Using bundler 1.13.7
+remote:        Installing rdoc 4.3.0
+remote:        Installing sass 3.4.23
+remote:        Installing tilt 2.0.6
+remote:        Installing sqlite3 1.3.13 with native extensions
+remote:        Installing turbolinks-source 5.0.0
+remote:        Installing tzinfo 1.2.2
+remote:        Installing rack-test 0.6.3
+remote:        Installing warden 1.2.7
+remote:        Installing mime-types 3.1
+remote:        Installing coffee-script 2.4.1
+remote:        Installing uglifier 3.0.4
+remote:        Installing sprockets 3.7.1
+remote:        Installing nokogiri 1.7.0.1 with native extensions
+remote:        Installing turbolinks 5.0.1
+remote:        Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+remote:        
+remote:        current directory:
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13/ext/sqlite3
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/ruby-2.3.4/bin/ruby -r
+remote:        ./siteconf20170618-276-1ahvt44.rb extconf.rb
+remote:        checking for sqlite3.h... no
+remote:        sqlite3.h is missing. Try 'brew install sqlite3',
+remote:        'yum install sqlite-devel' or 'apt-get install libsqlite3-dev'
+remote:        and check your shared library search path (the
+remote:        location where your sqlite3 shared library is located).
+remote:        *** extconf.rb failed ***
+remote:        Could not create Makefile due to some reason, probably lack of necessary
+remote:        libraries and/or headers.  Check the mkmf.log file for more details.  You may
+remote:        need configuration options.
+remote:        
+remote:        Provided configuration options:
+remote:        --with-opt-dir
+remote:        --without-opt-dir
+remote:        --with-opt-include
+remote:        --without-opt-include=${opt-dir}/include
+remote:        --with-opt-lib
+remote:        --without-opt-lib=${opt-dir}/lib
+remote:        --with-make-prog
+remote:        --without-make-prog
+remote:        --srcdir=.
+remote:        --curdir
+remote:        --ruby=/tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/ruby-2.3.4/bin/$(RUBY_BASE_NAME)
+remote:        --with-sqlite3-config
+remote:        --without-sqlite3-config
+remote:        --with-pkg-config
+remote:        --without-pkg-config
+remote:        --with-sqlite3-dir
+remote:        --without-sqlite3-dir
+remote:        --with-sqlite3-include
+remote:        --without-sqlite3-include=${sqlite3-dir}/include
+remote:        --with-sqlite3-lib
+remote:        --without-sqlite3-lib=${sqlite3-dir}/lib
+remote:        
+remote:        To see why this extension failed to compile, please check the mkmf.log which can
+remote:        be found here:
+remote:        
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/sqlite3-1.3.13/mkmf.log
+remote:        
+remote:        extconf failed, exit code 1
+remote:        
+remote:        Gem files will remain installed in
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/gems/sqlite3-1.3.13
+remote:        for inspection.
+remote:        Results logged to
+remote:        /tmp/build_eb3fbe5b60575e7ab26ded62826fab38/vendor/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0/sqlite3-1.3.13/gem_make.out
+remote:        
+remote:        An error occurred while installing sqlite3 (1.3.13), and Bundler cannot
+remote:        continue.
+remote:        Make sure that `gem install sqlite3 -v '1.3.13'` succeeds before bundling.
+remote:  !
+remote:  !     Failed to install gems via Bundler.
+remote:  !     Detected sqlite3 gem which is not supported on Heroku:
+remote:  !     https://devcenter.heroku.com/articles/sqlite3
+remote:  !
+remote:  !     Push rejected, failed to compile Ruby app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !       Push rejected to javatutorial-mcla.
+remote: 
+To https://git.heroku.com/javatutorial-mcla.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/javatutorial-mcla.git'
+somwang:~/workspace (master) $ bundle --without production
+Fetching gem metadata from https://rubygems.org/..........
+Fetching version metadata from https://rubygems.org/..
+Fetching dependency metadata from https://rubygems.org/.
+Resolving dependencies...
+Using rake 12.0.0
+Using i18n 0.8.0
+Using json 1.8.6
+Using minitest 5.10.1
+Using thread_safe 0.3.5
+Using builder 3.2.3
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using rack 1.6.5
+Using mime-types-data 3.2016.0521
+Using arel 6.0.4
+Using bundler 1.15.1
+Using thor 0.19.4
+Using concurrent-ruby 1.0.4
+Using sass 3.4.23
+Using tilt 2.0.6
+Using execjs 2.7.0
+Using coffee-script-source 1.12.2
+Using turbolinks-source 5.0.0
+Using multi_json 1.12.1
+Using rdoc 4.3.0
+Using bcrypt 3.1.11
+Using orm_adapter 0.5.0
+Using byebug 9.0.6
+Using debug_inspector 0.0.2
+Using sqlite3 1.3.13
+Using tzinfo 1.2.2
+Using nokogiri 1.7.0.1
+Using rack-test 0.6.3
+Using warden 1.2.7
+Using mime-types 3.1
+Using sprockets 3.7.1
+Using uglifier 3.0.4
+Using coffee-script 2.4.1
+Using turbolinks 5.0.1
+Using sdoc 0.4.2
+Using binding_of_caller 0.7.2
+Using activesupport 4.2.5
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.5
+Using jbuilder 2.6.1
+Using spring 2.0.1
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.8
+Using activejob 4.2.5
+Using activerecord 4.2.5
+Using actionview 4.2.5
+Using actionpack 4.2.5
+Using actionmailer 4.2.5
+Using railties 4.2.5
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.1.1
+Using jquery-rails 4.2.2
+Using responders 2.4.0
+Using rails 4.2.5
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Using devise 3.4.1
+Bundle complete! 15 Gemfile dependencies, 61 gems now installed.
+Gems in the group production were not installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+somwang:~/workspace (master) $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Doc.txt
+        modified:   Gemfile
+        modified:   Gemfile.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+somwang:~/workspace (master) $ git add .
+somwang:~/workspace (master) $ git commit -m "add Pg and rail factor"
+[master 211e7d3] add Pg and rail factor
+ 3 files changed, 21 insertions(+), 3 deletions(-)
+somwang:~/workspace (master) $ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+somwang:~/workspace (master) $ git push origin master
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 670 bytes | 0 bytes/s, done.
+Total 5 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:SomwangShep/java.git
+   ae224f4..211e7d3  master -> master
+somwang:~/workspace (master) $ git push heroku master
+Counting objects: 137, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (124/124), done.
+Writing objects: 100% (137/137), 441.47 KiB | 0 bytes/s, done.
+Total 137 (delta 16), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Ruby app detected
+remote: -----> Compiling Ruby/Rails
+remote: -----> Using Ruby version: ruby-2.3.4
+remote: -----> Installing dependencies using bundler 1.13.7
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment
+remote:        Warning: the running version of Bundler (1.13.7) is older than the version that created the lockfile (1.15.1). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
+remote:        Fetching gem metadata from https://rubygems.org/..........
+remote:        Fetching version metadata from https://rubygems.org/..
+remote:        Fetching dependency metadata from https://rubygems.org/.
+remote:        Installing i18n 0.8.0
+remote:        Installing rake 12.0.0
+remote:        Installing json 1.8.6 with native extensions
+remote:        Installing minitest 5.10.1
+remote:        Installing thread_safe 0.3.5
+remote:        Installing builder 3.2.3
+remote:        Installing erubis 2.7.0
+remote:        Installing mini_portile2 2.1.0
+remote:        Installing rack 1.6.5
+remote:        Installing arel 6.0.4
+remote:        Installing mime-types-data 3.2016.0521
+remote:        Installing bcrypt 3.1.11 with native extensions
+remote:        Installing coffee-script-source 1.12.2
+remote:        Installing execjs 2.7.0
+remote:        Installing thor 0.19.4
+remote:        Installing concurrent-ruby 1.0.4
+remote:        Installing orm_adapter 0.5.0
+remote:        Installing multi_json 1.12.1
+remote:        Installing pg 0.21.0 with native extensions
+remote:        Using bundler 1.13.7
+remote:        Installing rails_serve_static_assets 0.0.5
+remote:        Installing rails_stdout_logging 0.0.5
+remote:        Installing rdoc 4.3.0
+remote:        Installing sass 3.4.23
+remote:        Installing tilt 2.0.6
+remote:        Installing turbolinks-source 5.0.0
+remote:        Installing tzinfo 1.2.2
+remote:        Installing nokogiri 1.7.0.1 with native extensions
+remote:        Installing rack-test 0.6.3
+remote:        Installing warden 1.2.7
+remote:        Installing mime-types 3.1
+remote:        Installing coffee-script 2.4.1
+remote:        Installing uglifier 3.0.4
+remote:        Installing sprockets 3.7.1
+remote:        Installing rails_12factor 0.0.3
+remote:        Installing turbolinks 5.0.1
+remote:        Installing mail 2.6.4
+remote:        Installing loofah 2.0.3
+remote:        Installing rails-html-sanitizer 1.0.3
+remote:        Installing sdoc 0.4.2
+remote:        Installing activesupport 4.2.5
+remote:        Installing globalid 0.3.7
+remote:        Installing rails-deprecated_sanitizer 1.0.3
+remote:        Installing jbuilder 2.6.1
+remote:        Installing rails-dom-testing 1.0.8
+remote:        Installing activemodel 4.2.5
+remote:        Installing activejob 4.2.5
+remote:        Installing actionview 4.2.5
+remote:        Installing activerecord 4.2.5
+remote:        Installing actionpack 4.2.5
+remote:        Installing sprockets-rails 3.2.0
+remote:        Installing railties 4.2.5
+remote:        Installing actionmailer 4.2.5
+remote:        Installing coffee-rails 4.1.1
+remote:        Installing responders 2.4.0
+remote:        Installing sass-rails 5.0.6
+remote:        Installing jquery-rails 4.2.2
+remote:        Installing devise 3.4.1
+remote:        Installing rails 4.2.5
+remote:        Bundle complete! 15 Gemfile dependencies, 59 gems now installed.
+remote:        Gems in the groups development and test were not installed.
+remote:        Bundled gems are installed into ./vendor/bundle.
+remote:        Bundle completed (22.95s)
+remote:        Cleaning up the bundler cache.
+remote: -----> Installing node-v6.10.0-linux-x64
+remote: -----> Detecting rake tasks
+remote: -----> Preparing app for Rails asset pipeline
+remote:        Running: rake assets:precompile
+remote:        I, [2017-06-18T02:41:21.800269 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/favicon-086b5b4096b785de684cda8783ed6b3ac665fca2a05ffc5963f9b71f918a1398.ico
+remote:        I, [2017-06-18T02:41:21.802406 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/favicon-086b5b4096b785de684cda8783ed6b3ac665fca2a05ffc5963f9b71f918a1398.ico.gz
+remote:        I, [2017-06-18T02:41:21.807559 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/profile-f665b8a2cf562ea52e6cc26afcf8fcbdd007fbbd84c04b3e5747c352f116e627.jpg
+remote:        I, [2017-06-18T02:41:25.788098 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/application-4d130704a59e4cfb21f298e4de74c5e37e72700d251caf7ad181a687d8cf8a0e.js
+remote:        I, [2017-06-18T02:41:25.788290 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/application-4d130704a59e4cfb21f298e4de74c5e37e72700d251caf7ad181a687d8cf8a0e.js.gz
+remote:        I, [2017-06-18T02:41:26.235146 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/application-ed6c51ca4c66549ec724b1c47ce41483171589c8c7a62bdb64e527454168b05b.css
+remote:        I, [2017-06-18T02:41:26.235320 #1210]  INFO -- : Writing /tmp/build_38901afcd3605902c69204d0541568ed/public/assets/application-ed6c51ca4c66549ec724b1c47ce41483171589c8c7a62bdb64e527454168b05b.css.gz
+remote:        Asset precompilation completed (6.21s)
+remote:        Cleaning assets
+remote:        Running: rake assets:clean
+remote: 
+remote: ###### WARNING:
+remote:        You have not declared a Ruby version in your Gemfile.
+remote:        To set your Ruby version add this line to your Gemfile:
+remote:        ruby '2.3.4'
+remote:        # See https://devcenter.heroku.com/articles/ruby-versions for more information
+remote: 
+remote: ###### WARNING:
+remote:        No Procfile detected, using the default web server.
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> console, rake, web, worker
+remote: 
+remote: -----> Compressing...
+remote:        Done: 40.1M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://javatutorial-mcla.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/javatutorial-mcla.git
+ * [new branch]      master -> master
+somwang:~/workspace (master) $ herolu log
+bash: herolu: command not found
+somwang:~/workspace (master) $ herolu logs
+bash: herolu: command not found
+somwang:~/workspace (master) $ heroku logs
+2017-06-18T02:31:31.258737+00:00 app[api]: Release v1 created by user somwang@gmail.com
+2017-06-18T02:31:31.525079+00:00 app[api]: Release v2 created by user somwang@gmail.com
+2017-06-18T02:31:31.525079+00:00 app[api]: Enable Logplex by user somwang@gmail.com
+2017-06-18T02:35:53.000000+00:00 app[api]: Build started by user somwang@gmail.com
+2017-06-18T02:35:53.000000+00:00 app[api]: Build failed -- check your build logs
+2017-06-18T02:40:51.000000+00:00 app[api]: Build started by user somwang@gmail.com
+2017-06-18T02:41:34.478812+00:00 app[api]: Set LANG, RACK_ENV, RAILS_ENV, RAILS_SERVE_STATIC_FILES, SECRET_KEY_BASE config vars by user somwang@gmail.com
+2017-06-18T02:41:34.478812+00:00 app[api]: Release v3 created by user somwang@gmail.com
+2017-06-18T02:41:36.653093+00:00 app[api]: Release v4 created by user somwang@gmail.com
+2017-06-18T02:41:36.653093+00:00 app[api]: Attach DATABASE (@ref:postgresql-concave-66963) by user somwang@gmail.com
+2017-06-18T02:41:37.035017+00:00 app[api]: Deploy 211e7d35 by user somwang@gmail.com
+2017-06-18T02:41:37.035017+00:00 app[api]: Release v5 created by user somwang@gmail.com
+2017-06-18T02:41:37.049439+00:00 app[api]: Scaled to console@0:Free rake@0:Free web@1:Free worker@0:Free by user somwang@gmail.com
+2017-06-18T02:40:51.000000+00:00 app[api]: Build succeeded
+2017-06-18T02:41:39.999440+00:00 heroku[web.1]: Starting process with command `bin/rails server -p 35504 -e production`
+2017-06-18T02:41:44.139667+00:00 app[web.1]: [2017-06-18 02:41:44] INFO  WEBrick 1.3.1
+2017-06-18T02:41:44.139719+00:00 app[web.1]: [2017-06-18 02:41:44] INFO  ruby 2.3.4 (2017-03-30) [x86_64-linux]
+2017-06-18T02:41:44.140042+00:00 app[web.1]: [2017-06-18 02:41:44] INFO  WEBrick::HTTPServer#start: pid=4 port=35504
+2017-06-18T02:41:44.364128+00:00 heroku[web.1]: State changed from starting to up
+2017-06-18T02:42:27.939950+00:00 heroku[router]: at=info method=GET path="/" host=javatutorial-mcla.herokuapp.com request_id=4d6b2b71-3537-4153-b6be-c1abfc2b48e9 fwd="24.194.82.81" dyno=web.1 connect=1ms service=66ms status=500 bytes=1754 protocol=https
+2017-06-18T02:42:27.876950+00:00 app[web.1]: => Booting WEBrick
+2017-06-18T02:42:27.876969+00:00 app[web.1]: => Rails 4.2.5 application starting in production on http://0.0.0.0:35504
+2017-06-18T02:42:27.876970+00:00 app[web.1]: => Run `rails server -h` for more startup options
+2017-06-18T02:42:27.876971+00:00 app[web.1]: => Ctrl-C to shutdown server
+2017-06-18T02:42:27.876972+00:00 app[web.1]: Started GET "/" for 24.194.82.81 at 2017-06-18 02:42:27 +0000
+2017-06-18T02:42:27.879019+00:00 app[web.1]: The PGconn, PGresult, and PGError constants are deprecated, and will be
+2017-06-18T02:42:27.879021+00:00 app[web.1]: removed as of version 1.0.
+2017-06-18T02:42:27.879022+00:00 app[web.1]: 
+2017-06-18T02:42:27.879022+00:00 app[web.1]: You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+2017-06-18T02:42:27.879023+00:00 app[web.1]: 
+2017-06-18T02:42:27.879024+00:00 app[web.1]: Called from /app/vendor/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+2017-06-18T02:42:27.916447+00:00 app[web.1]: Processing by PostsController#index as HTML
+2017-06-18T02:42:27.934703+00:00 app[web.1]:   Post Load (6.7ms)  SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+2017-06-18T02:42:27.935247+00:00 app[web.1]:   Rendered posts/index.html.erb within layouts/application (8.3ms)
+2017-06-18T02:42:27.935426+00:00 app[web.1]: Completed 500 Internal Server Error in 19ms (ActiveRecord: 6.7ms)
+2017-06-18T02:42:27.936788+00:00 app[web.1]: 
+2017-06-18T02:42:27.936790+00:00 app[web.1]: ActionView::Template::Error (PG::UndefinedTable: ERROR:  relation "posts" does not exist
+2017-06-18T02:42:27.936791+00:00 app[web.1]: LINE 1: SELECT "posts".* FROM "posts"  ORDER BY created_at DESC
+2017-06-18T02:42:27.936792+00:00 app[web.1]:                               ^
+2017-06-18T02:42:27.936793+00:00 app[web.1]: : SELECT "posts".* FROM "posts"  ORDER BY created_at DESC):
+2017-06-18T02:42:27.936794+00:00 app[web.1]:     1: <% @posts.each do |post| %>
+2017-06-18T02:42:27.936795+00:00 app[web.1]:     2:   <div class="post_wrapper">
+2017-06-18T02:42:27.936795+00:00 app[web.1]:     3:     <h2 class="title"><%= link_to post.title, post %></h2>
+2017-06-18T02:42:27.936796+00:00 app[web.1]:     4:     <p class="body"><%= truncate(post.body, length:20) %></p>
+2017-06-18T02:42:27.936797+00:00 app[web.1]:   app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___871154769139496334_37613520'
+2017-06-18T02:42:27.936798+00:00 app[web.1]: 
+2017-06-18T02:42:27.936798+00:00 app[web.1]: 
+2017-06-18T02:42:28.082855+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=javatutorial-mcla.herokuapp.com request_id=d93c6685-37f5-4765-b9e0-9fbcc5d4708a fwd="24.194.82.81" dyno=web.1 connect=1ms service=4ms status=200 bytes=228 protocol=https
+somwang:~/workspace (master) $ heroku run rake db:migration
+Running rake db:migration on ⬢ javatutorial-mcla... up, run.2501 (Free)
+rake aborted!
+Don't know how to build task 'db:migration' (see --tasks)
+/app/vendor/bundle/ruby/2.3.0/gems/rake-12.0.0/exe/rake:27:in `<top (required)>'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `load'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli/exec.rb:27:in `run'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli.rb:332:in `exec'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli.rb:20:in `dispatch'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/cli.rb:11:in `start'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/exe/bundle:34:in `block in <top (required)>'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+/app/vendor/bundle/ruby/2.3.0/gems/bundler-1.13.7/exe/bundle:26:in `<top (required)>'
+/app/bin/bundle:3:in `load'
+/app/bin/bundle:3:in `<main>'
+(See full trace by running task with --trace)
+somwang:~/workspace (master) $ heroku run rake db:migrate
+Running rake db:migrate on ⬢ javatutorial-mcla... up, run.4527 (Free)
+The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /app/vendor/bundle/ruby/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'
+   (14.5ms)  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+   (5.2ms)  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  ActiveRecord::SchemaMigration Load (1.3ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20170617183434)
+   (1.0ms)  BEGIN
+== 20170617183434 CreatePosts: migrating ======================================
+-- create_table(:posts)
+   (10.2ms)  CREATE TABLE "posts" ("id" serial primary key, "title" character varying, "body" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+   -> 0.0121s
+== 20170617183434 CreatePosts: migrated (0.0123s) =============================
+
+  SQL (1.2ms)  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170617183434"]]
+   (3.9ms)  COMMIT
+Migrating to CreateComments (20170617204852)
+   (1.0ms)  BEGIN
+== 20170617204852 CreateComments: migrating ===================================
+-- create_table(:comments)
+   (8.7ms)  CREATE TABLE "comments" ("id" serial primary key, "name" character varying, "body" text, "post_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+   (3.8ms)  CREATE  INDEX  "index_comments_on_post_id" ON "comments"  ("post_id")
+   (4.0ms)  ALTER TABLE "comments" ADD CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+
+   -> 0.0227s
+== 20170617204852 CreateComments: migrated (0.0228s) ==========================
+
+  SQL (1.2ms)  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170617204852"]]
+   (5.2ms)  COMMIT
+Migrating to DeviseCreateUsers (20170617231922)
+   (1.2ms)  BEGIN
+== 20170617231922 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+   (10.5ms)  CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp, "updated_at" timestamp) 
+   -> 0.0175s
+-- add_index(:users, :email, {:unique=>true})
+   (3.6ms)  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+   -> 0.0084s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   (3.6ms)  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")
+   -> 0.0085s
+== 20170617231922 DeviseCreateUsers: migrated (0.0348s) =======================
+
+  SQL (1.2ms)  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170617231922"]]
+   (3.1ms)  COMMIT
+somwang:~/workspace (master) $ 

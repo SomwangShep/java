@@ -41,8 +41,8 @@ border-right: 1px solid #b8e2fe;
 
 ul {
 	list-style: none;
-	text-align: right;
-	padding-right: 3em;
+	text-align: left;
+	padding-right: 1.5em;
 	.category {
 		font-weight: 900;
 		font-size: 2.5em;
@@ -261,4 +261,31 @@ input[type="submit"] {
 		color: #33acb7;
 	}
 }
+}
+
+/*====================================================================*/
+/*            my old css from Webdevelopment:                         */
+/*====================================================================*/
+.codeblock 
+{
+	padding: 10px;
+	font-family: monospace;
+	border: 1px solid #aaaaaa;
+	background-color: #dddddd;
+	color: #000000;
+	white-space: pre;
+}
+table, td, th { border: 1px solid gray }
+h1 {text-align: center;}
+
+.centerBlue
+{
+  text-align: center;
+  color:blue;
+  font-family: monospace;
+}
+
+.preBlue
+{
+  color:blue;
 }

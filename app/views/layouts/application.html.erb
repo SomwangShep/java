@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>MCLA - Java Tutorial</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'http://fonts.gogle.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -12,13 +12,27 @@
   
   <div id="sidebar">
     <ul>
-      <li class="category"><%= link_to "Tumblr", root_path %></li>
-      <li><%= link_to "Posts", root_path %></li>
+      <li><%= link_to "01 - Programming", chapter1_path %></li>
+      <li><%= link_to "02 - Variables", chapter2_path %></li>
+      <li><%= link_to "03 - If Statements", chapter3_path %></li>
+      <li><%= link_to "04 - Programming Practices", chapter4_path %></li>
+      <li><%= link_to "chapter5", chapter5_path %></li>
+      <li><%= link_to "chapter6", chapter6_path %></li>
+      <li><%= link_to "chapter7", chapter7_path %></li>
+      <li><%= link_to "chapter8", chapter8_path %></li>
+      <li><%= link_to "chapter9", chapter9_path %></li>
+      <li><%= link_to "chapter10", chapter10_path %></li>
+      <li><%= link_to "chapter11", chapter11_path %></li>
+      <li><%= link_to "chapter12", chapter12_path %></li>
+      <li><%= link_to "chapter13", chapter13_path %></li>
+      <li><%= link_to "chapter14", chapter14_path %></li>
       <li><%= link_to "About", about_path %></li>
-    </ul>
+      <li><%= link_to "Posts", root_path %></li>
+    
     <% if !user_signed_in? %>
-      <p class="sign_in"><%= link_to "User Login", new_user_session_path %></p>
+      <li><%= link_to "User Login", new_user_session_path %></li>
     <% end %>
+    </ul>
       
   </div>
   

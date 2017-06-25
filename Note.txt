@@ -1,0 +1,32 @@
+H1 = header
+h2 = each section
+h3 = other header
+
+image
+<p style="text-align: center;"><%= image_tag "c3_p3.jpg"%></p>
+
+	<p class="codeblock">
+Boolean b;
+char letter3;
+int x;
+double unitPrices;
+	</p>
+	
+	<pre>
+	5 / 2 => 2
+	20 / 6 => 3
+	3 / 4 => 0
+	</pre>	
+	
+	<h2 id="assignment">
+		Assignment Statements
+	</h2>	
+	
+  <p class="centerBlue">
+    <code>3 < 4		( 3 Is Less Than 4)</code>
+  </p>	
+	
+	
+	https://codex.wordpress.org/Creating_a_Favicon
+	16 x 16 pixels square and is saved as favicon.ico
+	http://www.favicon-generator.org/

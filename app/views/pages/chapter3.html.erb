@@ -1,0 +1,465 @@
+<div id="page_wrapper">
+<div id="content">
+<!-- ========================================================= -->	
+	<table>
+		<tr><td><a href="#RelationalOperators">Relational Operators</a></td><td><a href="#ComparingStrings">Comparing Strings</a></td><td><a href="#LogicalOperators">Logical Operators</a></td><td><a href="#TheORoperator">The || operator (OR)</a></td></tr>
+		<tr><td><a href="#TheNOToperator">The ! operator (NOT)</a></td><td><a href="#Conditions">Conditions</a></td><td><a href="#OrderofOperations">Order of Operations</a></td><td><a href="#IfStatements">If Statements</a></td></tr>
+		<tr><td><a href="#ElseStatements">Else Statements</a></td><td><a href="#NestedIfStatements">Nested If Statements</a></td><td><a href="#"></a></td><td><a href="#"></a></td></tr>
+	</table>
+<!-- ========================================================= -->	
+  <h1> Chapter 3 – If Statements </h1>
+  <p >
+    An <em>if</em> statement is a way to make a program execute code conditionally.  That means if some condition is met, the code will run.  If the condition is not met, the code will not run.  An <em>if</em> statement begins with the word if followed by a condition in parentheses.  A code block enclosed in curly braces follows the condition.
+  </p>
+  <p class="codeblock">
+if(x > 5)
+{
+	System.out.println("x is greater than 5");
+}
+  </p>
+  <p>
+    The Budget program in the last chapter subtracts a person's expenses from their paycheck and displays the money remaining.  If the expenses are greater than the paycheck, the money remaining will be negative.  It would be nice if the program could react differently in that case.
+  </p>
+  <p class="codeblock">
+money = pay - car - rent - electricity - food;
+
+System.out.println("You have $" + money + " left.");
+<strong>
+if(money < 0)
+{
+	System.out.println("You're in trouble!!");
+}</strong>
+  </p>
+  <p style="text-align: center;"><%= image_tag "c3_p1.jpg"%></p>
+  <p>
+    An <em>if</em> statement controls the code that follows it.  If the condition in the if statement is true, the code will run.  A condition (or Boolean expression), is an expression that is equal to true or false.  A simple condition can be made using relational operators.
+  </p>
+  <h2 id="RelationalOperators">
+    Relational Operators
+  </h2>
+  <pre style="color:blue">
+	>		Is Greater Than
+	<		Is Less Than
+	>=		Is Greater Than Or Equal To
+	<=		Is Less Than Or Equal To
+	==		Is Equal To
+	!=		Is Not Equal To
+  </pre>
+  <p>
+    There are six relational operators.  These operators compare two numbers (two <em>ints</em> or two <em>doubles</em>).  The result of these comparisons will always be either true or false.  Notice that the "is equal to" operator uses two equal signs (==).  A single equal sign is an assignment operator(=), which will not compare two numbers.    
+  </p>
+  <p>
+    A condition might use constants.
+  </p>
+  <p class="centerBlue">
+    <code>3 < 4		( 3 Is Less Than 4)</code>
+  </p>
+  <p>
+    The condition above is <em>true</em> because 3 is less than 4.
+  </p>
+  <p>
+    The condition can use variables.  In the example below, x = 3, and y = 4.
+  </p>
+  <p class="centerBlue">
+    <code>x > y		(x Is Greater Than y)</code>
+  </p>
+  <p>
+    This condition is false.  3 is not greater than 4.
+  </p>
+  <p>
+    The relational operators compare numbers, so expressions using mathematical operators can be used.
+  </p>
+  <p class="centerBlue">
+    <code>x – 3 <= 2 + y / 4</code>
+  </p>  
+  
+  <h2 id="ComparingStrings">
+    Comparing Strings
+  </h2>
+  <p>
+    The relational operators only compare numbers.  You must compare Strings using the equals() method.  Suppose we have the following two String variables:
+  </p>
+  <p class="codeblock">
+String word1 = "apples";
+String word2 = "oranges";
+  </p>
+  <p>
+    The line below will result in a false, because the two Strings are not the same.
+  </p>
+  <p class="codeblock">
+word1.equals(word2) => false
+  </p>
+  <h2 id="LogicalOperators">
+    Logical Operators
+  </h2>
+  <p>
+    Logical operators are used for <em>boolean</em> values.  The result of these operations is always a <em>true</em> or a <em>false</em>.
+  </p>
+  <h3>
+    The && operator (AND)
+  </h3>
+  <p>
+    The && operator is also called the AND operator.  If the operand on both sides of the AND are <em>true</em>, the result of the AND operation will be <em>true</em>.  However, if either operand is <em>false</em>, the result will be <em>false</em>.
+  </p>
+  <p class="codeblock">
+false && false => false
+false && true  => false
+true  && false => false
+true  && true  => true
+  </p>
+  <p>
+    The AND operator has the same meaning in Java as in common speech. 
+  </p>
+  <p class="centerBlue">
+    Your car will start if the battery is charged AND it has gas.
+  </p>
+  <p>
+    The only time the car will start is when both operands are <em>true</em>.  If either or both are <em>false</em>, the car will not start.
+  </p>
+  
+  <h2 id="TheORoperator">
+    The || operator (OR)
+  </h2>
+  <p class="codeblock">
+false || false  => false
+false || true   => true
+true  || false  => true
+true  || true	=> true
+  </p>
+  <p>
+    Once again, the word OR has the same meaning in Java as in common speech.
+  </p>
+  <p class="centerBlue">
+    You'll be in trouble if your brakes fail OR if your wheels fall off.
+  </p>
+  <p>
+    You will be in trouble if either operand is <em>true</em>.  You will only be safe if both operands are <em>false</em>.
+  </p>
+  <h2 id="TheNOToperator (NOT)">
+    The ! operator (NOT)
+  </h2>
+  <p>
+    The NOT operator only uses one operand. If the value following the NOT operator is <em>true</em>, the result of the operation is <em>false</em>.  If the value following the NOT operator is <em>false</em>, the result of the operation is <em>true</em>.
+  </p>
+  <p class="codeblock">
+!false => true 
+!true => false
+  </p>
+  
+  <h2 id="Conditions">
+    Conditions
+  </h2>
+  <p>
+    A condition is an expression that is equal to <em>true</em> or <em>false</em>.  A condition can involve multiple logical operators.
+  </p>
+  <p class="centerBlue">
+    true || !false && false || !true
+  </p>
+  <p>
+    Parentheses can be used to force the normal order of operations.  Operations inside parentheses are always done before those outside.
+  </p>
+  <p class="centerBlue">
+    !(true && !false) && (false || true)
+  </p>
+  <p>
+    The operands involved in a condition can be any constant, variable, or expression that results in a value of <em>true</em> or <em>false</em>.  This includes <em>boolean</em> variables, as well as relational expressions, and String comparisons.
+  </p>
+  <p class="codeblock">
+boolean b = true;
+int x = 5;
+String s = "Pie";
+
+b || x + 2 < 7 && s.equals("Yummy")
+  </p>
+  <h2 id="OrderofOperations">
+    Order of Operations
+  </h2>
+  <p>
+    When a program resolves a condition, it performs operations in the following order:
+  </p>
+  <pre class="preBlue">
+  Replace variables
+  Evaluate methods
+  NOT operators   !
+  Multiplications and divisions   *, /, %
+  Additions and subtractions   +, -
+  Comparisons   <, <=, >, >=, ==, !=
+  AND operators   &&
+  OR operators   ||
+  </pre>
+  <h3>
+    Example:
+  </h3>
+  <p class="codeblock">
+int x = 3;
+boolean b = false;
+String s = “Hi”;
+
+x + 1 > 0 &&   b   || !s.equals(“Hi”) 
+  </p>
+  <P>
+    Showing the program operation in steps:
+  </P>
+  <pre>
+  3 + 1 > 0 && false || !s.equals(“Hi”)	// Variables
+  3 + 1 > 0 && false || !true				// Methods
+  3 + 1 > 0 && false || false				// NOT
+    4   > 0 && false || false				// Addition
+      true  && false || false				// Comparison
+           false     || false				// AND
+                   false     				// OR
+  </pre>
+  <p>
+    Note that the AND operations are always done before the OR operations.
+  </p>
+  
+  <h2 id="IfStatements">
+    If Statements
+  </h2>
+  <p>
+    An <em>if</em> statement is a control structure.  It decides if the block of code following it will run or not.  A semicolon is not used after an <em>if</em> statement.  An <em>if</em> statement consists of the word <em>if</em>, followed by a condition enclosed in parentheses.  If the condition is <em>true</em>, the code following the <em>if</em> statement will run.  If the condition is <em>false</em>, the code following the <em>if</em> statement will be skipped, and execution will continue.  Curly braces ({}) are used to specify the "block of code" associated with the <em>if</em> statement.
+  </p>
+  <p class="codeblock">
+<strong>if(x < 5)
+{
+	y = y * 2;
+	x = 5;
+}</strong>
+System.out.println("y = " + y);
+  </p>
+  <p>
+    If the value of the variable x is less than 5, y will be doubled, and x will be set to 5.  If x is not less than 5 (x is greater than 5 or equal to 5), the values of x and y will not change.  Either way, the value of y is printed.
+    </br>If curly braces are not used, only the line following the <em>if</em> statement is controlled by it.
+  </p>
+  <p class="codeblock">
+<strong>if(x < 5)
+	y = y * 2;</strong>
+x = 5;
+System.out.println("y = " + y);
+  </p>
+  <p>
+    The use of curly braces for all <em>if</em> statements is recommended, even if the code block contains only one line.  The braces make the code more readable.  They also make it less likely that you will introduce an error later if code is added.
+  </p>
+  <p class="codeblock">
+<strong>if(x < 5)
+{
+	y = y * 2;
+}</strong>
+x = 5;
+System.out.println("y = " + y);
+  </p>
+  <p>
+    Note that indentation is used to indicate levels within the program structure.  This whitespace is ignored by the compiler, but its use is important to make programs more readable.
+  </p>
+  
+  <h2 id="ElseStatements">
+    Else Statements
+  </h2>
+  <p>
+    An <em>else</em> statement can follow any <em>if</em> statement.  The else statement is optional.  You can use an <em>if</em> statement without an <em>else</em> statement.  However, you can not use an <em>else</em> statement without an <em>if</em> statement.  The <em>else</em> statement must immediately follow the closing brace of the <em>if</em> code block.
+  </p>
+  <p class="codeblock">
+if(x < 5)
+{
+	y = y * 2;
+	x = 5;
+}
+<strong>else
+{
+	y = y * 3;
+	x = 10;
+}</strong>
+System.out.println("y = " + y);
+  </p>
+  <p>
+    If the condition inside the <em>if</em> statement is <em>true</em>, the code block following the if statement runs, and the code block following the <em>else</em> statement is skipped. If the condition is <em>false</em>, the code block following the <em>if</em> statement is skipped, and the code block following the <em>else</em> runs.  Note that exactly one of the two blocks will always run.  Even if a variable values change within the <em>if</em> block, once the <em>if</em> block runs, the <em>else</em> block will not.
+  </p>
+  <p>
+    Once the <em>if</em> or <em>else</em> block runs once, the program continues to execute.  The <em>if</em> statement is not a repetition structure.  It will not repeat the code multiple times.  
+  </p>
+  <h3>
+    Example Program – PetShop
+  </h3>
+  <p>
+    In this example, the user chooses a type of pet to purchase (fish or cat), and the user decides how many to buy.  The program sets the price per pet based on the type of pet chosen.  Only 5 of each pet are available, so if the customer asks for more than 5, they only get 5.
+  </p>
+  <p>
+    Ordering two cats
+  </p>
+  <p style="text-align: center;"><%= image_tag "c3_p7.jpg"%></p>
+  <p>
+    Ordering seven fish
+  </p>
+  <p style="text-align: center;"><%= image_tag "c3_p7_02.jpg"%></p>
+  <p class="codeblock">
+import java.util.Scanner;
+
+public class PetShop
+{
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		String pet = "";
+		double price = 0.0;
+		int number = 0;
+
+		System.out.println("^_^  Welcome to PetShop  ^_^\n");
+		System.out.print("Would you like a fish or a cat? ");
+		pet = keyboard.next();
+
+		<strong>if(pet.equals("fish"))</strong>
+		{
+			System.out.println("Our fish are $2.00 each.");
+			price = 2;
+		}
+
+		<strong>if(pet.equals("cat"))</strong>
+		{
+			System.out.println("Our cats are $10.00 each.");
+			price = 10;
+		}
+
+		System.out.print("How many would you like? ");
+		number = keyboard.nextInt();
+
+		<strong>if(number <= 5)</strong>
+		{
+			System.out.println("Okay " + number + " it is.");
+			price = price * number;
+		}
+		<strong>else</strong>
+		{
+			System.out.println("Sorry.  We only have 5.");
+			price = price * 5;
+		}
+
+		System.out.println("That comes to $" + price);
+	}
+}
+  </p>
+  <p>
+    In the PetShop example program, the user is asked to enter a String.  If the String is equal to "fish", only the first if statement runs, setting the price to $2.00.  If the String is equal to "cat", the first if statement does not run, but the second one does, setting the price to $10.00.
+  </p>
+  <pre>
+	pet = keyboard.next();
+
+	<strong>if(pet.equals("fish"))</strong>
+	{
+		System.out.println("Our fish are $2.00 each.");
+		price = 2;
+	}
+
+	<strong>if(pet.equals("cat"))</strong>
+	{
+		System.out.println("Our cats are $10.00 each.");
+		price = 10;
+	}
+  </pre>
+  <p>
+    If the user input is equal to something other than "fish" or "cat", neither if statement will run, and the price will remain at $0.00.  Notice that the Strings are compared using the equals() method, not with the == operator, which only works for numbers.
+  </p>
+  <p>
+    Next, the user is asked how many pets are being purchased.  If the user chooses to buy 5 or fewer pets, the price is multiplied by the number of pets.  If the user asks for more than 5 pets, the program apologizes for the shortage and charges the user for 5 pets.
+  </p>
+  <pre>
+	number = keyboard.nextInt();
+
+	<strong>if(number <= 5)</strong>
+	{
+		System.out.println("Okay " + number + " it is.");
+		price = price * number;
+	}
+	<strong>else</strong>
+	{
+		System.out.println("Sorry.  We only have 5.");
+		price = price * 5;
+	}
+  </pre>
+  <p>
+    Either the block of code following the <em>if</em> will run, or the block of code following the <em>else</em> will run.
+  </p>
+  
+  <h2 id="NestedIfStatements">
+    Nested If Statements
+  </h2>
+  <p>
+    An <em>if</em> statement can be placed inside the code block of another <em>if</em> statement, or inside an <em>else</em> code block.  This is called nesting. Statements can be nested many levels deep.
+  </p>
+  <p>
+    The code below prints a message <em>if</em> the variables x and y are both positive.
+  </p>
+  <p class="codeblock">
+if(<strong>x >= 0</strong>)
+{
+	if(<strong>y >= 0</strong>)
+	{
+		System.out.println("Both numbers are positive.");
+	}
+}
+  </p>
+  <p>
+    The message only prints <em>if</em> both if conditions are <em>true</em>.  We could get the same functionality using an AND operator.
+  </p>
+  <p class="codeblock">
+if(<strong>x >= 0 && y >= 0</strong>)
+{
+	System.out.println("Both numbers are positive.");
+}
+  </p>
+  <h3>
+    Example Program – Quadrants
+  </h3>
+  <p>
+    This program asks the user for an x value and a y value, and tells the user which quadrant the point is in.
+  </p>
+  <p style="text-align: center;"><%= image_tag "c3_p10.jpg"%></p>
+  <p class="codeblock">
+import java.util.Scanner;
+
+public class Quadrants
+{
+	public static void main(String[] args)
+	{
+		Scanner keyboard = new Scanner(System.in);
+		int x = 0;
+		int y = 0;
+
+		System.out.print("Enter x coordinate: ");
+		x = keyboard.nextInt();
+		System.out.print("Enter y coordinate: ");
+		y = keyboard.nextInt();
+
+
+		<strong>if(y > 0)	</strong>
+		{
+			System.out.println("It's on the top");
+				<strong>if(x > 0)	</strong>
+			{
+				System.out.println("It's in Quadrant 1");
+			}
+				<strong>else	</strong>
+			{
+				System.out.println("It's in Quadrant 2");
+			}
+		}
+			<strong>else	</strong>
+		{
+			System.out.println("It's on the bottom");
+			<strong>if(x > 0)	</strong>
+			{
+				System.out.println("It's in Quadrant 4");
+			}
+				<strong>else	</strong>
+			{
+				System.out.println("It's in Quadrant 3");
+			}
+		}
+	}
+}
+  </p>
+  
+  
+
+<!-- ========================================================= -->	
+</div> <!-- end content -->
+</div> <!-- close page_wrapper -->

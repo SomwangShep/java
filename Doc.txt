@@ -6,3 +6,31 @@ error make sure to do below line
 somwang:~/workspace $ git init
 before you do 
 git remote add origin git@github.com:SomwangShep/java.git
+
+
+
+
+---------------------------
+git init
+git remote add origin git@github.com:SomwangShep/java.git
+git remote -v
+git config --global user.name "SomwangShep"
+git config --global user.email "ss1792@mcla.edu"
+git status
+git add .
+git commit -m "First comit"
+git push -u origin master
+gem install bundler
+heroku login
+heroku create
+heroku apps:rename javatutorial-mcla
+git push heroku master
+git status
+git add .
+git commit -m "add Pg and rail factor"
+git status
+git push origin master
+git push heroku master = some error
+heroku logs = complain about database
+heroku run rake db:migrate
+**** now you should be allet *****
