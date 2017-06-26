@@ -1,7 +1,8 @@
 <div id="page_wrapper">
 <div id="content">
+<!--<div class="container"> -->
 <!-- ========================================================= -->	
-	<table>
+	<table id="jumpTbl">
 		<tr><td><a href="#A Java Program">A Java Program</a></td><td><a href="#Variables">Variables</a></td><td><a href="#StringConcatenation">String Concatenation</a></td><td><a href="#TheEscapeCharacterandEscapeSequences">The Escape Character and Escape Sequences</a></td></tr>
 		<tr><td><a href="#System.out">System.out.println() and System.out.print()</a></td><td><a href="#JavaReservedWords">Java Reserved Words</a></td><td><a href="#SyntaxErrors">Syntax Errors</a></a></td><td><a href="#AsciiArt">Ascii Art</a></td></tr>
 	</table>
@@ -41,10 +42,10 @@
     In these examples, A is the first number following the instruction and B is the second.  Instructions and values are put together to form commands.  Some simplified examples are shown below.
   </p>
   <pre>
-  Instruction	  A	   B        
+  Instruction	  A	       B        
   0100011    00001010  01111010  		store the number 10 at address 192 
   1101011    00001010  01111010  		add the numbers at addresses 10 and 192
-  1001001    01111010  				store the result at address 192
+  1001001    01111010  				      store the result at address 192
   </pre>
   <p>
     A program is a list of commands for a computer to follow.  A machine language program is written in binary, like the example above.  All programs must be in a binary format to run on a computer.  
@@ -76,7 +77,7 @@
   <p>
     Using a text editor, type the following, and save the file as "Howdy.java".  
   </p>
-  <p class="codeblock">
+  <pre>
 public class Howdy
 {
 	public static void main(String[] args)
@@ -84,7 +85,7 @@ public class Howdy
 		System.out.println("Howdy!");
 	}
 }
-  </p>
+  </pre>
   <p>
     To compile the program, open a command prompt.  Navigate to the location of the file "Howdy.java", and type the following:
   </p>
@@ -107,7 +108,7 @@ public class Howdy
   <p>
     For now, all of the Java programs we write will look like the figure below.
   </p>
-  <p class="codeblock">
+  <pre>
 public class <strong><em>AnyNameYouChoose</strong></em>
 {
 	public static void main(String[] args)
@@ -120,7 +121,7 @@ public class <strong><em>AnyNameYouChoose</strong></em>
 
 	}
 }
-  </p>
+  </pre>
   <p>
     The first line says that this file defines a Java class, and that the class is public.  For now, that means that people are allowed to run the program.  Every program we write will start with the words "public class".  The next word will be the name of the class (the name of the program).  The name must start with a letter.  It can have numbers in it, as long as they are not the first character.  No other characters may be used.  By convention, we always start a class name with an uppercase letter.
   </p>
@@ -133,9 +134,9 @@ public class <strong><em>AnyNameYouChoose</strong></em>
   <p>
     The next line is very strange.
   </p>
-  <p class="codeblock">
+  <pre >
 public static void main(String[] args)    
-  </p>
+  </pre>
   <p>
     This is the beginning of the program's main() method definition.  Every program must have a place to start, and this line tells the JVM where.  We'll save an explanation of this line until later.  For now, every java program has this line.  Memorize it.
   </p>
@@ -149,9 +150,9 @@ public static void main(String[] args)
   <p>
     When a program runs, it starts at the first line within main().  After it executes each line, it moves on to the next.  When there are no more lines to execute, the program ends.  So far, the only executable line we've seen is the method call:
   </p>
-  <p class="codeblock">
+  <pre>
 System.out.println("Howdy");    
-  </p>
+  </pre>
   <p>
     System.out.println() is a method.  That means it is a command you can use in a program.    Each time System.out.println() is encountered, the program prints text to the console.  
   </p>
@@ -164,7 +165,7 @@ System.out.println("Howdy");
   <h3>
     Example Program – Camelot
   </h3>
-  <p class="codeblock">
+  <pre>
 public class Camelot
 {
 	public static void main(String[] args)
@@ -175,18 +176,18 @@ public class Camelot
 		System.out.println("that are quite unsingable");
 	}
 }
-  </p>
+  </pre>
   <p style="text-align: center;"><%= image_tag "c1_p7.jpg"%></p>
   <p>
     Although the computer runs one line of code at a time, the compiler does not see a line as we do.  Each method call ends with a semicolon, and the compiler sees this as the end of a line.  Whitespace characters that we add in, such as extra spaces, tabs, and newlines, are ignored by the compiler.  The program below would compile into the same executable file as the one above.  However, it is not as easy to read.
   </p>
   <pre style="color:red">
-  public    class     Camelot{public static 
-  void main(String[] args){
-  System.out.println("We're Knights of the round table")
-  ;
-     System.out.println("Our shows are formidable");System.out.println ("But often times we're given rhymes");
-  System.out.println("that are quite unsingable");}		}
+public    class     Camelot{public static 
+void main(String[] args){
+System.out.println("We're Knights of the round table")
+;
+   System.out.println("Our shows are formidable");System.out.println ("But often times we're given rhymes");
+System.out.println("that are quite unsingable");}		}
   </pre>
   <h2 id="Variables">
     Variables
@@ -200,22 +201,22 @@ public class Camelot
   <p>
     A String variable is a name that stands for a String of text.
   </p>
-  <p class="codeblock">
+  <pre>
 String s = "We eat ham and jam and spam a lot";
-  </p>
+  </pre>
   <p>
     The line of code above creates a new String variable called s.  The variable is set to the line "We eat ham and jam and spam a lot".  If we use this variable as the argument to System.out.println(), the method prints the line of text the variable is holding.
   </p>
-  <p class="codeblock">
-    System.out.println(s);
-  </p>
+  <pre>
+System.out.println(s);
+  </pre>
   <p>
     Note that the s is not surrounded by quotation marks.  If an argument to System.out.println() is enclosed in quotes, the exact text in the quotes is displayed.  If there are no quotes, the program looks for a variable with that name, and prints the text held by that variable.
   </p>
   <h3>
     Example Program – TextPrinter
   </h3>
-  <p class="codeblock">
+  <pre>
     public class TextPrinter
 {
 	public static void main(String[] args)
@@ -229,7 +230,7 @@ String s = "We eat ham and jam and spam a lot";
 		System.out.println("line2");
 	}
 }
-  </p>
+  </pre>
   <P>
     The first two calls to System.out.println() do not contain quotes.  The text stored in the variables is printed.  The second two calls have quotes around the variable names, so the names themselves are printed, rather than the variable values.
   </P>
@@ -239,15 +240,15 @@ String s = "We eat ham and jam and spam a lot";
   <p>
     A String variable is used to store text in a program.  For numbers, we use other types of variables.  An int variable is used to store an integer, or whole number.  A new int variable can be created and set to a value in much the same way as a String variable.
   </p>
-  <p class="codeblock">
+  <pre>
 int x = 5;
-  </p>
+  </pre>
   <p >
     The line of code above creates a new <em>int</em> variable called <em>x</em>, and stores the number 5 in it.  If this variable is used as the argument to System.out.println(), 
   </p>
-  <p  class="codeblock">
+  <pre>
 System.out.println(x);
-  </p>
+  </pre>
   <p>
     The variable's value will be automatically converted to a String and printed.  Once again, if the variable name is surrounded by quotes, the variable name will be printed, rather than the variable value.
   </p>
@@ -257,12 +258,12 @@ System.out.println(x);
   <p>
     Concatenation is a fancy word for joining.  There are times when we have two Strings, and we want to join them together into one string.  The plus (+) operator placed between two Strings will join them together into a single String.
   </p>
-  <p class="codeblock">
+  <pre>
 String part1 = "Between our quests we sequin vests";
 String part2 = "and impersonate Clark Gable";
 
 System.out.println(part1 + part2);
-  </p>
+  </pre>
   <p>
     The code above creates two String variables.  The two Strings are joined together into a single String before they are printed to the console, causing the program to print the line:
   </p>
@@ -272,23 +273,23 @@ System.out.println(part1 + part2);
   <p>
     Note the absence of a space between the two joined lines, because the first String has no space at the end, and the second has no space at the beginning.  If we want a space between two joined Strings, we need to put that in.
   </p>
-  <p class="codeblock">
-    System.out.println(part1 + " " + part2);
-  </p>
+  <pre>
+System.out.println(part1 + " " + part2);
+  </pre>
   <p>
     The line of code above joins three Strings together.  The space in the middle is a String constant, the other two parts are String variables.  Many Strings can be concatenated together in one statement.
   </p>
   <p>
     Number variables can also be concatenated to Strings using the concatenation operator.
   </p>
-  <p class="codeblock">
+  <pre>
 int x = 42;
 System.out.println("The answer is " + x);
-  </p>
+  </pre>
   <h3>
     Example Program – Concatenation
   </h3>
-  <p class="codeblock">
+  <pre>
 public class Concatenation
 {
 	public static void main(String[] args)
@@ -299,7 +300,7 @@ public class Concatenation
 		System.out.println("A " + product + " is $" + price);
 	}
 }
-  </p>
+  </pre>
   <p style="text-align: center;"><%= image_tag "c1_p10.jpg"%></p>
   <h3 id="TheEscapeCharacterandEscapeSequences">
     The Escape Character and Escape Sequences
@@ -307,18 +308,18 @@ public class Concatenation
   <p>
     You can use any letters, numbers, or symbols you like in a String.
   </p>
-  <p class="codeblock">
+  <pre>
 String nonsense = "@-_+';(:)*&^%$#!?.,{}[]|";
-  </p>
+  </pre>
   <p>
     There are only two characters you can not use in a String.
   </p>
   <p>
     You can not use a quotation mark (") in a String because it will signal the end of the String.  The compiler will see the rest of the String as garbage and complain.
   </p>
-  <p class="codeblock">
+  <pre>
 String bad = "some text " looks like garbage";
-  </p>
+  </pre>
   <p>
     The other character that can not be used normally is the backslash (\) because it is used as an escape character.  An escape character tells the compiler not to read and print the character normally, but to treat the next character as part of it.  An escape sequence is a combination of two or more characters that start with an escape character and are treated as a single character.
     </br>For example, if we want to put a quotation mark in our String, we can use the \" escape sequence.  Similarly, if we want to put a backslash character in a String, we use \\.  The box below shows some of the Java escape sequences.
@@ -339,7 +340,7 @@ String bad = "some text " looks like garbage";
   <h3>
     Example Program - EscapeSequences
   </h3>
-  <p class="codeblock">
+  <pre>
 public class EscapeSequences
 {
 	public static void main(String[] args)
@@ -359,7 +360,7 @@ public class EscapeSequences
 		System.out.println(beep);
 	}
 }
-  </p>
+  </pre>
   <p style="text-align: center;"><%= image_tag "c1_p11.jpg"%></p>
   <h2 id="System.out">
     System.out.println() and System.out.print()
@@ -367,7 +368,7 @@ public class EscapeSequences
   <p>
     There are two ways to print a String to the console.  The System.out.print() method prints the String, and leaves the cursor right after it.  The next String printed will continue on the same line.  The System.out.println() method adds a newline to the end of the String moving the cursor to the next line after printing.  The next String printed will start on this new line.
   </p>
-  <p class="codeblock">
+  <pre>
 public class Printing
 {
 	public static void main(String[] args)
@@ -384,7 +385,7 @@ public class Printing
 		System.out.println(s3);
 	}
 }
-  </p>
+  </pre>
   <p style="text-align: center;"><%= image_tag "c1_p12.jpg"%></p>
   <h2 id="JavaReservedWords">
     Java Reserved Words
@@ -423,7 +424,7 @@ public class Printing
   <p>
     The sixth line is missing the semicolon at the end.
   </p>
-  <p class="codeblock">
+  <pre>
 public class Syntax
 {
 	public static void main(String[] args)
@@ -432,7 +433,7 @@ public class Syntax
 		<atrong>System.out.println(s)</strong>
 	}
 }
-  </p>
+  </pre>
   <p>
     The compiler error says a semicolon was expected on line 6
   </p>
@@ -450,7 +451,7 @@ public class Syntax
   <p>
     The opening parenthesis is missing on the fifth line.
   </p>
-  <p class="codeblock">
+  <pre>
 public class Syntax
 {
 	public static void main(String[] args)
@@ -458,7 +459,7 @@ public class Syntax
 		<strong>System.out.println"A String");</strong>
 	}
 }
-  </p>
+  </pre>
   <p>
     The compiler says line 5 is not a statement, and that a semicolon was expected.  Note that the compiler noticed that something was wrong on line 5, but did not know what.
   </p>
@@ -477,7 +478,7 @@ public class Syntax
   <p>
     The closing brace is missing on the sixth line.  
   </p>
-  <P class="codeblock">
+  <Pre>
 public class Syntax
 {
 	public static void main(String[] args)
@@ -485,7 +486,7 @@ public class Syntax
 		System.out.println("A String");
 
 }
-  </P>
+  </Pre>
   <p>
     The compiler doesn't notice the error until line 7.  Sometimes the line given in an error message is several lines after the actual error.
   </p>
@@ -501,7 +502,7 @@ public class Syntax
   <p>
     The word println is misspelled.
   </p>
-  <p class="codeblock">
+  <pre>
 public class Syntax
 {
 	public static void main(String[] args)
@@ -509,7 +510,7 @@ public class Syntax
 		System.out.printLn("A String");
 	}
 }
-  </p>
+  </pre>
   <p>
   The compiler doesn't recognize the symbol println because it is spelled wrong.  Java is case sensitive, so println and printLn are two different words.
   </p>
@@ -529,7 +530,7 @@ symbol  : method printLn(java.lang.String)
   <h3>
     Example Program - AsciiArt
   </h3>
-  <p class="codeblock">
+  <pre>
 public class AsciiArt
 {
 	public static void main(String[] args)
@@ -554,9 +555,10 @@ public class AsciiArt
 		System.out.println("|--------------------------------|");
 	}
 }
-  </p>
+  </pre>
   <p style="text-align: center;"><%= image_tag "c1_p16.jpg"%></p>
   
 <!-- ========================================================= -->	
+<!--</div> <!-- container -->
 </div> <!-- end content -->
-</div> <!-- close page_wrapper -->
+</div> <!-- close page_wrapper --> 

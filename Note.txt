@@ -2,8 +2,12 @@ H1 = header
 h2 = each section
 h3 = other header
 
+style="color:blue;"
+style="text-align: center;"
+<span style="color:red;">// Don't do this</span>
+
 image
-<p style="text-align: center;"><%= image_tag "c3_p3.jpg"%></p>
+<p style="text-align: center;"><%= image_tag "c6_p3.jpg"%></p>
 
 	<p class="codeblock">
 Boolean b;
@@ -26,7 +30,17 @@ double unitPrices;
     <code>3 < 4		( 3 Is Less Than 4)</code>
   </p>	
 	
-	
+=================================================================
 	https://codex.wordpress.org/Creating_a_Favicon
 	16 x 16 pixels square and is saved as favicon.ico
 	http://www.favicon-generator.org/
+	
+============================= bootstrap ========================
+add gem 'bootstrap-sass', '~> 3.3.6' to Gem file
+add  to application.css.scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+add in application.js
+//= require bootstrap-sprockets
