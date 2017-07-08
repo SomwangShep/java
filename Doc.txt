@@ -7,26 +7,26 @@ somwang:~/workspace $ git init
 before you do 
 git remote add origin git@github.com:SomwangShep/java.git
 
-
-
-
 ---------------------------
+====only firts time======================
 git init
 git remote add origin git@github.com:SomwangShep/java.git
 git remote -v
 git config --global user.name "SomwangShep"
 git config --global user.email "ss1792@mcla.edu"
+********************************************************
 git status
 git add .
 git commit -m "Second comit"
 git push -u origin master
 gem install bundler
 heroku login
-*******************************************************not need if you just update
+*******************************************************
+---------not need if you just update-------------------
 heroku create
 heroku apps:rename javatutorial-mcla
 *******************************************************
-git push heroku master	 = yuo should be all set for updating exitign web
+git push heroku master	 = you should be all set for updating exitign web
 
 
 *******************************************************
@@ -39,3 +39,8 @@ git push heroku master = some error
 heroku logs = complain about database
 heroku run rake db:migrate
 **** now you should be allet *****
+
+
+-------------------------------------------
+use code instead of em starting mid of chapter 2
+pictures use 65% in word view before take the pictures

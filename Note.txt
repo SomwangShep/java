@@ -1,26 +1,20 @@
 H1 = header
 h2 = each section
 h3 = other header
+h4 = each assig in assigment
 
 style="color:blue;"
 style="text-align: center;"
 <span style="color:red;">// Don't do this</span>
 
-image
 <p style="text-align: center;"><%= image_tag "c6_p3.jpg"%></p>
+<td colspan="2">
 
-	<p class="codeblock">
+	<pre>
 Boolean b;
 char letter3;
 int x;
-double unitPrices;
-	</p>
-	
-	<pre>
-	5 / 2 => 2
-	20 / 6 => 3
-	3 / 4 => 0
-	</pre>	
+double unitPrices;</pre>
 	
 	<h2 id="assignment">
 		Assignment Statements
@@ -30,6 +24,28 @@ double unitPrices;
     <code>3 < 4		( 3 Is Less Than 4)</code>
   </p>	
 	
+	
+<ul style="list-style-type:none">
+	
+<table id="jumpTbl">
+	<tr><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td></tr>
+	<tr><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td></tr>
+	<tr><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td><td><a href="#"></a></td></tr>
+</table>	
+
+<table>
+	<tr><th>HighCard</th></tr>
+	<tr><td>- static int[] cards</td></tr>
+	<tr><td>
+		+ static void main(String[] args)</br>
+		- static void shuffleCards()</br>
+		- static int drawCard()</br>
+		- static String getName(int n)</br>
+		- static int getValue(int n)</br>
+		- static void declareWinner(int p, int c)</br>
+	</td></tr>
+</table>
+
 =================================================================
 	https://codex.wordpress.org/Creating_a_Favicon
 	16 x 16 pixels square and is saved as favicon.ico
@@ -44,3 +60,10 @@ add  to application.css.scss
 
 add in application.js
 //= require bootstrap-sprockets
+
+
+
+===================================================
+chapter 5 has table with header
+chapter 6 has code and pictre in table with gray blackgroud
+chapter has daigram

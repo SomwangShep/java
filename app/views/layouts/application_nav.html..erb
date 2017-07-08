@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MCLA - Java Tutorial</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.gogle.com/css?family=Raleway:400,700' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico'%>
+  <%= csrf_meta_tags %>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+<!-- ========================= Sidebar ======================== --> 
+  <div id="sidebar">
+    <ul>
+      <li><%= link_to "01 - Programming", chapter1_path %></li>
+      <li><%= link_to "02 - Variables", chapter2_path %></li>
+      <li><%= link_to "03 - If Statements", chapter3_path %></li>
+      <li><%= link_to "04 - Programming Practices", chapter4_path %></li>
+      <li><%= link_to "05 - While Loops", chapter5_path %></li>
+      <li><%= link_to "06 - For Loops", chapter6_path %></li>
+      <li><%= link_to "07 - Arrays", chapter7_path %></li>
+      <li><%= link_to "08 - Classes Objects and Methods", chapter8_path %></li>
+      <li><%= link_to "09 - Strings", chapter9_path %></li>
+      <li><%= link_to "10 - Text Files", chapter10_path %></li>
+      <li><%= link_to "11 - Defining Methods", chapter11_path %></li>
+      <li><%= link_to "12 - Programming with Methods", chapter12_path %></li>
+      <li><%= link_to "13 - Defining Classes", chapter13_path %></li>
+      <li><%= link_to "14 - Prorgamming with Classes", chapter14_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Posts", root_path %></li>
+    
+    <% if !user_signed_in? %>
+      <li><%= link_to "User Login", new_user_session_path %></li>
+    <% end %>
+    </ul>
+      
+  </div><!-- sidebar -->
+<!-- ====================== End Sidebar ======================== -->  
+
+<!-- ======================= main content ====================== -->
+ <div id="main_content"> 
+    <div id="header">
+      </br></br></br></br>
+      <% if current_page?(root_path) %>
+        <p>Post Feed</p>
+      <% elsif current_page?(about_path) %>
+        <p>my Site</p>
+      <% else %>
+        <%= link_to "Back to Post Feed", root_path %>
+      <% end %>
+      <% if user_signed_in? %>
+        <div class="button">
+          <button class="button"><%= link_to "Make Post", new_post_path %></button>
+          <button class="button"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></buton>
+        </div>
+      <% end %>
+      
+    </div><!-- header -->
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert") %>
+  <% end %>
+
+  <%= yield %>
+  </div>
+<!-- ====================End main content ====================== --> 
+<!-- test -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+</body>
+</html>
