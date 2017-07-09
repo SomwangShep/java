@@ -16,7 +16,7 @@
   
 </head>
 <body>
-<!-- ========================= Sidebar ======================== --> 
+<!-- ========================== Sidebar ======================== --> 
   <div id="sidebar">
     <ul>
       <li><%= link_to "01 - Programming", chapter1_path %></li>
@@ -43,56 +43,42 @@
  <div id="main_content"> 
  </br>
 
-<!-- =========I not sure what is this for ========== -->
+<!-- ===================I not sure what is this for ============ -->
   <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert") %>
   <% end %> 
-<!--============ I not sure what is this =============-->
+<!--=================End I not sure what is this ================-->
 
   <%= yield %>
   </div>
-<!-- ====================End main content ====================== --> 
-<!-- test -->
+<!-- ==================== End main content ====================== --> 
+<!-- ========================= Menu Bar ========================= --> 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Massachusets College Of Liberal Arts (MCLA)</a>
-    
     <div class="collapse navbar-collapse" id="myNavbar">
-      
       <ul class="nav navbar-nav"> 
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Posts", root_path %></li>    
         
-      <% if current_page?(root_path) %>
-        Post Feed
-      <% elsif current_page?(about_path) %>
-        <li>my Site</li>
-      <% else %>
-        <%= link_to "Back to Post Feed", root_path %>
-      <% end %>
-      <% if user_signed_in? %>
-          <li><%= link_to "Make Post", new_post_path %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-          
-      <% end %>
+        <% if user_signed_in? %>
+            <li><%= link_to "Make Post", new_post_path %></li>
+        <% end %>
       </ul> 
       
-      
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Posts", root_path %></li>        
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        
         <% if !user_signed_in? %>
           <li><%= link_to "User Login", new_user_session_path %></li>
         <% end %>
-        
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+  
+        <% if user_signed_in? %>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% end %>
       </ul>
-      
-    </div>
-  </div>
+    </div> <!--end collapse navbar-collapse -->
+  </div><!-- end container-fluid -->
 </nav>
-
+<!-- ======================End Menu Bar ========================= --> 
 
 </body>
 </html>

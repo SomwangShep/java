@@ -44,3 +44,5 @@ heroku run rake db:migrate
 -------------------------------------------
 use code instead of em starting mid of chapter 2
 pictures use 65% in word view before take the pictures
+
+================Second time upload =======================
