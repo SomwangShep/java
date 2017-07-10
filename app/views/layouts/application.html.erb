@@ -2,6 +2,17 @@
 <html>
 <head>
   <title>MCLA - Java Tutorial</title>
+  
+<!-- Google Adsense -->  
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5227259389540783",
+    enable_page_level_ads: true
+  });
+</script>
+<!-- End Google Adsense -->  
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'https://fonts.gogle.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -43,11 +54,10 @@
  <div id="main_content"> 
  </br>
 
-<!-- ===================I not sure what is this for ============ -->
+<!-- ======this section is to display error message ============ -->
   <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert") %>
   <% end %> 
-<!--=================End I not sure what is this ================-->
 
   <%= yield %>
   </div>
