@@ -51,5 +51,4 @@ git add .
 git commit -m "Second comit"
 git push -u origin master
 gem install bundler
-heroku login somwang@gmail.com, Ss352690
 git push heroku master
