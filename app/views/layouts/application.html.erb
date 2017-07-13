@@ -3,15 +3,15 @@
 <head>
   <title>MCLA - Java Tutorial</title>
   
-<!-- Google Adsense -->  
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- ======================= Google Adsense ============================ -->  
+<!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-5227259389540783",
     enable_page_level_ads: true
   });
-</script>
-<!-- End Google Adsense -->  
+</script>-->
+<!-- ======================== End Google Adsense ========================-->  
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag 'application', 'https://fonts.gogle.com/css?family=Raleway:400,700' %>
@@ -44,9 +44,7 @@
       <li><%= link_to "12 - Programming with Methods", chapter12_path %></li>
       <li><%= link_to "13 - Defining Classes", chapter13_path %></li>
       <li><%= link_to "14 - Prorgamming with Classes", chapter14_path %></li>
-
     </ul>
-      
   </div><!-- sidebar -->
 <!-- ====================== End Sidebar ======================== -->  
 
@@ -54,22 +52,37 @@
  <div id="main_content"> 
  </br>
 
-<!-- ======this section is to display error message ============ -->
   <% flash.each do |name, msg| %>
+    </br></br>
     <%= content_tag(:div, msg, class: "alert") %>
   <% end %> 
-
-  <%= yield %>
+  
+  <div id="page_wrapper">
+    <div id="content">
+      <%= yield %>
+    </div>
   </div>
+  <%= render 'layouts/footer' %>
+  
+</div><!-- main_content -->
 <!-- ==================== End main content ====================== --> 
 <!-- ========================= Menu Bar ========================= --> 
 <nav class="navbar navbar-inverse navbar-fixed-top">
+<!--<nav class="navbar navbar-inverse">   -->
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Java Tutorial - MCLA</a>
+    <!--<a class="navbar-brand" href="#">MCLA - Java Tutorial</a>-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "MCLA - Java Tutorial", root_path, class: "navbar-brand" %>
+    </div>    
+    
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav"> 
-        <li><%= link_to "About", about_path %></li>
-        <li><%= link_to "Posts", root_path %></li>    
+        <li><%= link_to "Posts", posts_path %></li>  
         
         <% if user_signed_in? %>
             <li><%= link_to "Make Post", new_post_path %></li>
@@ -78,11 +91,11 @@
       
       <ul class="nav navbar-nav navbar-right">
         <% if !user_signed_in? %>
-          <li><%= link_to "User Login", new_user_session_path %></li>
+          <li><%= link_to " Login", new_user_session_path,class:"glyphicon glyphicon-log-in" %></li>
         <% end %>
   
         <% if user_signed_in? %>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to " Logout", destroy_user_session_path, method: :delete, class:"glyphicon glyphicon-log-out" %></li>
         <% end %>
       </ul>
     </div> <!--end collapse navbar-collapse -->

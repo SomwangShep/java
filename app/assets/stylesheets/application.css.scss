@@ -395,4 +395,18 @@ h1,h2,h3,h4,h5,h6{
   -o-tab-size: 2; /* Code for Opera 10.6-12.1 */
   tab-size: 2;
 }
+/*======================footer===============================*/
+footer {
+	//margin-top: 45px;
+	//padding-top: 5px;
+	border-top: 1px solid #eaeaea;
+	color: #777;
+}
+footer small {
+	float: left
+}
+footer ul {
+	float: right;
+	list-style: none;
+}
 

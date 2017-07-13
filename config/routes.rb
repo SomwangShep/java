@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   resources :posts do
   resources :comments
 end
-  root "posts#index"
+  #root "posts#index"
+  root "pages#about"
   
   get '/about', to: 'pages#about'
+  get '/posts', to: 'posts#index'
   get '/chapter1', to: 'pages#chapter1'
   get '/chapter2', to: 'pages#chapter2'
   get '/chapter3', to: 'pages#chapter3'
