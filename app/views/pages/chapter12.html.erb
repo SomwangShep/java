@@ -92,7 +92,7 @@ public class Globals
 <table>
 	<tr><th>Globals</th></tr>
 	<tr><td>- static int x = 0</td></tr>
-	<tr><td>+ static void main(String[] args) </br> - static void setXToOne() </br > - static void setXToZero()</td></tr>
+	<tr><td>+ static void main(String[] args) <br/> - static void setXToOne() </br > - static void setXToZero()</td></tr>
 </table>
 
 <h2 id="StructuringPrograms">
@@ -115,17 +115,17 @@ public class Globals
 
 <table>
 	<tr><th>Dungeon</th></tr>
-	<tr><td>- static int hitPoints = 100</br>
-			- static int gold = 0</br>
-			- static int potions = 2;</br>
+	<tr><td>- static int hitPoints = 100<br/>
+			- static int gold = 0<br/>
+			- static int potions = 2;<br/>
 	</td></tr>
 	<tr><td>
-		+ static void main(String[] args)</br>
-		- static int generateMonster()</br>
-		- static String getMonsterName(int monster)</br>
-		- static void fightMonster(int monster)</br>
-		- static void retreat()</br>
-		- static void usePotion()</br>
+		+ static void main(String[] args)<br/>
+		- static int generateMonster()<br/>
+		- static String getMonsterName(int monster)<br/>
+		- static void fightMonster(int monster)<br/>
+		- static void retreat()<br/>
+		- static void usePotion()<br/>
 	</td></tr>
 </table>
 <p>We’ll represent the monsters using <code>ints</code>.</p>
@@ -195,12 +195,12 @@ public static void main(String[] args)
 	<tr><th>HighCard</th></tr>
 	<tr><td>- static int[] cards</td></tr>
 	<tr><td>
-		+ static void main(String[] args)</br>
-		- static void shuffleCards()</br>
-		- static int drawCard()</br>
-		- static String getName(int n)</br>
-		- static int getValue(int n)</br>
-		- static void declareWinner(int p, int c)</br>
+		+ static void main(String[] args)<br/>
+		- static void shuffleCards()<br/>
+		- static int drawCard()<br/>
+		- static String getName(int n)<br/>
+		- static int getValue(int n)<br/>
+		- static void declareWinner(int p, int c)<br/>
 	</td></tr>
 </table>
 <p>
@@ -321,14 +321,14 @@ private static String readFile(String fileName)
 </p>
 <table>
 	<tr><th>SearchAndReplace</th></tr>
-	<tr><td></br></td></tr>
+	<tr><td><br/></td></tr>
 	<tr><td>
-+ static void main(String[] args)</br>
-- static int showMenu()</br>
-- static String readFile(String fileName)</br>
-- static void showFile(String text)</br>
-- static int searchFile(String text, String searchString)</br>
-- static String replaceString(String text, String sOld, String sNew)</br>
++ static void main(String[] args)<br/>
+- static int showMenu()<br/>
+- static String readFile(String fileName)<br/>
+- static void showFile(String text)<br/>
+- static int searchFile(String text, String searchString)<br/>
+- static String replaceString(String text, String sOld, String sNew)<br/>
 - static void writeFile(String fileName, String text)
 	</td></tr>
 </table>
@@ -337,28 +337,28 @@ private static String readFile(String fileName)
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-4"><p>
-			What would you like to do?</br>
-			1 Open a File</br>
-			2 View File</br>
-			3 Search File</br>
-			4 Replace Words</br>
-			5 Save File</br>
-			6 Quit</br>
+			What would you like to do?<br/>
+			1 Open a File<br/>
+			2 View File<br/>
+			3 Search File<br/>
+			4 Replace Words<br/>
+			5 Save File<br/>
+			6 Quit<br/>
 			1
 			</p>
 			<p>
-			Enter filename:<strong>Rinkitink.txt</strong></br>
-			Reading file: Rinkitink.txt</br>
-			File read.</br>
+			Enter filename:<strong>Rinkitink.txt</strong><br/>
+			Reading file: Rinkitink.txt<br/>
+			File read.<br/>
 			</p></div>
     <div class="col-sm-4"><p>
-			What would you like to do?</br>
-			1 Open a File</br>
-			2 View File</br>
-			3 Search File</br>
-			4 Replace Words</br>
-			5 Save File</br>
-			6 Quit</br>
+			What would you like to do?<br/>
+			1 Open a File<br/>
+			2 View File<br/>
+			3 Search File<br/>
+			4 Replace Words<br/>
+			5 Save File<br/>
+			6 Quit<br/>
 			2
 			</p>
 			<p>
@@ -370,48 +370,48 @@ private static String readFile(String fileName)
 			hill unless I ride?"
 			</p></div>
     <div class="col-sm-4"><p>
-			What would you like to do?</br>
-			1 Open a File</br>
-			2 View File</br>
-			3 Search File</br>
-			4 Replace Words</br>
-			5 Save File</br>
-			6 Quit</br>
+			What would you like to do?<br/>
+			1 Open a File<br/>
+			2 View File<br/>
+			3 Search File<br/>
+			4 Replace Words<br/>
+			5 Save File<br/>
+			6 Quit<br/>
 			3
 			</p>
 			<p>
-			Enter a search word or phrase:hill</br>
-			The search term appears at index 68.</br>
+			Enter a search word or phrase:hill<br/>
+			The search term appears at index 68.<br/>
 			</p>
 			</div>
 		</div>
   <div class="row">
     <div class="col-sm-6"><p>
     	<hr>
-			What would you like to do?</br>
-			1 Open a File</br>
-			2 View File</br>
-			3 Search File</br>
-			4 Replace Words</br>
-			5 Save File</br>
-			6 Quit</br>
+			What would you like to do?<br/>
+			1 Open a File<br/>
+			2 View File<br/>
+			3 Search File<br/>
+			4 Replace Words<br/>
+			5 Save File<br/>
+			6 Quit<br/>
 			4
 			</p>
 			<p>
-			Enter the term to replace:hill</br>
-			Enter the new term:mountain</br>
-			The text has been replaced.</br>
+			Enter the term to replace:hill<br/>
+			Enter the new term:mountain<br/>
+			The text has been replaced.<br/>
 			</p>
 			</div>
     <div class="col-sm-6"><p>
     	<hr>
-			What would you like to do?</br>
-			1 Open a File</br>
-			2 View File</br>
-			3 Search File</br>
-			4 Replace Words</br>
-			5 Save File</br>
-			6 Quit</br>
+			What would you like to do?<br/>
+			1 Open a File<br/>
+			2 View File<br/>
+			3 Search File<br/>
+			4 Replace Words<br/>
+			5 Save File<br/>
+			6 Quit<br/>
 			2
 			</p>
 			<p>
@@ -495,41 +495,41 @@ public static void main(String[] args)
 <!-- ========Worksheet and AssignmentPrograms================= -->
 <div id="AssignmentPrograms">
 	<h3>Assignment Programs</h3>
-	</br><h4>MethodDungeon</h4>
+	<br/><h4>MethodDungeon</h4>
 	<p>Complete the Dungeon using the main() method given in this chapter.</p>
-	</br><h4>FancyMethodDungeon</h4>
+	<br/><h4>FancyMethodDungeon</h4>
 	<p>
 	Write a dungeon game like the one described in this chapter, but with added features, such as:
-	</br>Items that can be found and increase damage or armor
-	</br>Spells that can be cast on enemies
-	</br>A configuration file that stores monster names and stats that the program reads
-	</br>A configuration file with a map requiring the player to choose n, s, e, or w
-	</br>Races or classes a player can choose at the start of a game
+	<br/>Items that can be found and increase damage or armor
+	<br/>Spells that can be cast on enemies
+	<br/>A configuration file that stores monster names and stats that the program reads
+	<br/>A configuration file with a map requiring the player to choose n, s, e, or w
+	<br/>Races or classes a player can choose at the start of a game
 	</p>
-	</br><h4>HighCard</h4>
+	<br/><h4>HighCard</h4>
 	<p>Complete the HighCard program using the main() method given in this chapter.</p>
-	</br><h4>SearchAndReplace</h4>
+	<br/><h4>SearchAndReplace</h4>
 	<p>
 		Complete the SearchAndReplace program using the main() method given in this chapter.
 	</p>
-	</br><h4>BlackJack</h4>
+	<br/><h4>BlackJack</h4>
 	<p>
 		This game allows the user to play any number of hands.  Game play proceeds as follows:
 	</p>
 	<p>
 The player gets two cards and sees them both.
-</br>The house gets two cards.  The player sees the second.
-</br>The player may hit (take more cards) up to 5.
-</br>The house will hit until the hand is worth 17 or more.
+<br/>The house gets two cards.  The player sees the second.
+<br/>The player may hit (take more cards) up to 5.
+<br/>The house will hit until the hand is worth 17 or more.
 	</p>
 	<p>
 The hands are scored as follows:
-</br>Aces are worth 1 or 11, whichever is better.
-</br>Face cards are worth 10.
-</br>Other cards are worth the card number.
-</br>The hand is worth the sum of the cards in it.
-</br>Either player "busts" if the hand goes over 21.
-</br>Highest score under 22 wins.
+<br/>Aces are worth 1 or 11, whichever is better.
+<br/>Face cards are worth 10.
+<br/>Other cards are worth the card number.
+<br/>The hand is worth the sum of the cards in it.
+<br/>Either player "busts" if the hand goes over 21.
+<br/>Highest score under 22 wins.
 	</p>
 	<p>Sample Run</p>
 <!----------------------------->

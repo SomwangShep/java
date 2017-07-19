@@ -40,47 +40,47 @@
 <table>
 	<tr><th>Programmer</th></tr>
 	<tr><td>
-		- String employeeName;</br>
-		- int employeeNumber;</br>
-		- String primaryLanguage;</br>
+		- String employeeName;<br/>
+		- int employeeNumber;<br/>
+		- String primaryLanguage;<br/>
 	</td></tr>
 	<tr><td>
-		+ Programmer(String name, int number, String language)</br>
-		+ String getName()</br>
-		+ int getNumber()</br>
-		+ String getLanguage()</br>
-		+ void setLanguage(String language)</br>
+		+ Programmer(String name, int number, String language)<br/>
+		+ String getName()<br/>
+		+ int getNumber()<br/>
+		+ String getLanguage()<br/>
+		+ void setLanguage(String language)<br/>
 	</td></tr>
 </table>
 <!-- ------------------------------------------------------- -->
-</br>
+<br/>
 <table>
 	<tr><th>Manager</th></tr>
 	<tr><td>
-		- String employeeName;</br>
-		- int employeeNumber;</br>
-		- int ManagementLevel;</br>
+		- String employeeName;<br/>
+		- int employeeNumber;<br/>
+		- int ManagementLevel;<br/>
 	</td></tr>
 	<tr><td>
-		+ Manager(String name, int number, int level)</br>
-		+ String getName()</br>
-		+ int getNumber()</br>
-		+ int getLevel()</br>
-		+ void setLevel(int level)</br>
+		+ Manager(String name, int number, int level)<br/>
+		+ String getName()<br/>
+		+ int getNumber()<br/>
+		+ int getLevel()<br/>
+		+ void setLevel(int level)<br/>
 	</td></tr>
 </table>
 <!-- ------------------------------------------------------- -->	
-</br>
+<br/>
 <table>
 	<tr><th>Team</th></tr>
 	<tr><td>
-		- Manager teamManager;</br>
-		- Programmer[] programmers;</br>
+		- Manager teamManager;<br/>
+		- Programmer[] programmers;<br/>
 	</td></tr>
 	<tr><td>
-		+ Team(Manager manager)</br>
-		+ void addProgrammer(Programmer newProgrammer)</br>
-		+ String listLanguages()</br>
+		+ Team(Manager manager)<br/>
+		+ void addProgrammer(Programmer newProgrammer)<br/>
+		+ String listLanguages()<br/>
 	</td></tr>
 </table>	
 <p>
@@ -253,38 +253,38 @@ public class Team
 <table>
 	<tr><th>Employee</th></tr>
 	<tr><td>
-		- String employeeName;</br>
+		- String employeeName;<br/>
 		- int employeeNumber;
 	</td></tr>
 	<tr><td>
-		+ Employee(String name, int number)</br>
-		+ String getName()</br>
+		+ Employee(String name, int number)<br/>
+		+ String getName()<br/>
 		+ int getNumber()
 	</td></tr>
 </table>
 <!-- ------------------------------------------------------------- -->
-</br>
+<br/>
 <table>
 	<tr><th>Programmer   <small><em>extends Employee</em></small></th></tr>
 	<tr><td>
 		- String primaryLanguage;
 	</td></tr>
 	<tr><td>
-		+ Programmer(String name, int number, String language)</br>
-		+ String getLanguage()</br>
+		+ Programmer(String name, int number, String language)<br/>
+		+ String getLanguage()<br/>
 		+ void setLanguage(String language)
 	</td></tr>
 </table>
 <!-- ------------------------------------------------------------- -->
-</br>
+<br/>
 <table>
 	<tr><th>Manager   <small><em>extends Employee</em></small></th></tr>
 	<tr><td>
 		- int ManagementLevel;
 	</td></tr>
 	<tr><td>
-		+ Manager(String name, int number, int level)</br>
-		+ int getLevel()</br>
+		+ Manager(String name, int number, int level)<br/>
+		+ int getLevel()<br/>
 		+ void setLevel(int level)
 	</td></tr>
 </table>
@@ -551,15 +551,15 @@ public class ScheduleTester
     	<table>
     		<tr><th>GridPoint</th></tr>
     		<tr><td>
-					- int x</br>
-					- int y</br>
+					- int x<br/>
+					- int y<br/>
     		</td></tr>
     		<tr><td>
-					+ GridPoint()</br>
-					+ GridPoint(int xVal, int yVal)</br>
-					+ int getX()</br>
-					+ int getY()</br>
-					+ void setX(int xVal)</br>
+					+ GridPoint()<br/>
+					+ GridPoint(int xVal, int yVal)<br/>
+					+ int getX()<br/>
+					+ int getY()<br/>
+					+ void setX(int xVal)<br/>
 					+ void setY(int yVal)
     		</td></tr>    		
     	</table>
@@ -579,10 +579,10 @@ public class ScheduleTester
 		- GridPoint[] point
 	</td></tr>
 	<tr><td>
-		+ PointList()</br>
-		+ void addPoint(int x, int y)</br>
-		- boolean contains(int x, int y)</br>
-		+ int countMatches(PointList list)</br>
+		+ PointList()<br/>
+		+ void addPoint(int x, int y)<br/>
+		- boolean contains(int x, int y)<br/>
+		+ int countMatches(PointList list)<br/>
 		+ void drawGrid(char marker)
 	</td></tr>    		
 </table>
@@ -629,9 +629,9 @@ public class HighCard
 				- int n
 			</td></tr>
 			<tr><td>
-				+ Card(int number)</br>
-				+ int getValue()</br>
-				+ String getName()</br>
+				+ Card(int number)<br/>
+				+ int getValue()<br/>
+				+ String getName()<br/>
 				- int getNumber()
 			</td></tr>    		
 		</table>
@@ -643,8 +643,8 @@ public class HighCard
 				- Card[] cards
 			</td></tr>
 			<tr><td>
-				+ Deck()</br>
-				+ void shuffle()</br>
+				+ Deck()<br/>
+				+ void shuffle()<br/>
 				+ Card drawCard()
 			</td></tr>    		
 		</table>
@@ -665,20 +665,20 @@ public class HighCard
  		<table>
 			<tr><th>Student</th></tr>
 			<tr><td>
-				- int schoolID</br>
-				- int height</br>
-				- int gradeLevel</br>
+				- int schoolID<br/>
+				- int height<br/>
+				- int gradeLevel<br/>
 				- String[] grades
 			</td></tr>
 			<tr><td>
-				+ Student()</br>
-				+ int get schoolID ()</br>
-				+ int getHeight()</br>
-				+ int getGradeLevel()</br>
-				+ String[] getGrades()</br>
-				+ void set schoolID (int id)</br>
-				+ void setHeight(int newHeight)</br>
-				+ void setGradeLevel(int level)</br>
+				+ Student()<br/>
+				+ int get schoolID ()<br/>
+				+ int getHeight()<br/>
+				+ int getGradeLevel()<br/>
+				+ String[] getGrades()<br/>
+				+ void set schoolID (int id)<br/>
+				+ void setHeight(int newHeight)<br/>
+				+ void setGradeLevel(int level)<br/>
 				+ void addGrade(String grade)
 			</td></tr>    		
 		</table>
@@ -687,45 +687,45 @@ public class HighCard
  		<table>
 			<tr><th>Teacher</th></tr>
 			<tr><td>
-				- int schoolID</br>
-				- int height</br>
-				- double salary</br>
+				- int schoolID<br/>
+				- int height<br/>
+				- double salary<br/>
 				- String[] courses
 			</td></tr>
 			<tr><td>
-				+ Teacher()</br>
-				+ int get schoolID ()</br>
-				+ int getHeight()</br>
-				+ double getSalary()</br>
-				+ String[] getCourses()</br>
-				+ void set schoolID (int id)</br>
-				+ void setHeight(int newHeight)</br>
-				+ void setSalary(double amount)</br>
+				+ Teacher()<br/>
+				+ int get schoolID ()<br/>
+				+ int getHeight()<br/>
+				+ double getSalary()<br/>
+				+ String[] getCourses()<br/>
+				+ void set schoolID (int id)<br/>
+				+ void setHeight(int newHeight)<br/>
+				+ void setSalary(double amount)<br/>
 				+ void addCourse(String course)
 			</td></tr>    		
 		</table>
     </div>
   </div>
-  </br>
+  <br/>
   <div class="row">
     <div class="col-sm-6" >
  		<table>
 			<tr><th>Secretary</th></tr>
 			<tr><td>
-				- int schoolID</br>
-				- int height</br>
-				- double salary</br>
+				- int schoolID<br/>
+				- int height<br/>
+				- double salary<br/>
 				- String department
 			</td></tr>
 			<tr><td>
-				+ Secretary()</br>
-				+ int get schoolID ()</br>
-				+ int getHeight()</br>
-				+ double getSalary()</br>
-				+ String getDepartment()</br>
-				+ void set schoolID (int id)</br>
-				+ void setHeight(int newHeight)</br>
-				+ void setSalary(double amount)</br>
+				+ Secretary()<br/>
+				+ int get schoolID ()<br/>
+				+ int getHeight()<br/>
+				+ double getSalary()<br/>
+				+ String getDepartment()<br/>
+				+ void set schoolID (int id)<br/>
+				+ void setHeight(int newHeight)<br/>
+				+ void setSalary(double amount)<br/>
 				+ void setDepartment(String d)
 			</td></tr>    		
 		</table>
@@ -734,20 +734,20 @@ public class HighCard
  		<table>
 			<tr><th>Custodian</th></tr>
 			<tr><td>
-				- int schoolID</br>
-				- int height</br>
-				- double salary</br>
+				- int schoolID<br/>
+				- int height<br/>
+				- double salary<br/>
 				- int floor
 			</td></tr>
 			<tr><td>
-				+ Custodian()</br>
-				+ int get schoolID ()</br>
-				+ int getHeight()</br>
-				+ double getSalary()</br>
-				+ int getFloor()</br>
-				+ void set schoolID (int id)</br>
-				+ void setHeight(int newHeight)</br>
-				+ void setSalary(double amount)</br>
+				+ Custodian()<br/>
+				+ int get schoolID ()<br/>
+				+ int getHeight()<br/>
+				+ double getSalary()<br/>
+				+ int getFloor()<br/>
+				+ void set schoolID (int id)<br/>
+				+ void setHeight(int newHeight)<br/>
+				+ void setSalary(double amount)<br/>
 				+ void setFloor(int newFloor)
 			</td></tr>    		
 		</table>
@@ -762,7 +762,7 @@ public class HighCard
 <p style="text-align: center;"><%= image_tag "c14_p21.jpg"%></p>
 <p>
 	Now we have much less code because all of the duplicate code has been collected into one place.
-	</br>Taking the idea of extension one step further, we could make a class called Employee to represent employees.  Code common to Teacher, Secretary, and Custodian could go in this class.
+	<br/>Taking the idea of extension one step further, we could make a class called Employee to represent employees.  Code common to Teacher, Secretary, and Custodian could go in this class.
 </p>
 
 <p style="text-align: center;"><%= image_tag "c14_p22.jpg"%></p>
@@ -861,23 +861,23 @@ import java.util.Random;
 	<h3>Assignment Programs</h3>
 	<p>Complete the Darts program started in this chapter.</p>
 	<p>Complete the HigherCard program started in this chapter.</p>
-	</br><h4>Blackjack</h4>
+	<br/><h4>Blackjack</h4>
 	<p>
 		The player gets two cards and sees them both.
-		</br>The house gets two cards.  The player sees the second.
-		</br>The player may hit (take more cards) up to 5.
-		</br>The house will hit until the hand is worth 17 or more.
+		<br/>The house gets two cards.  The player sees the second.
+		<br/>The player may hit (take more cards) up to 5.
+		<br/>The house will hit until the hand is worth 17 or more.
 	</p>
 	<p>
 		The hands are scored as follows:
-		</br>Aces are worth 1 or 11, whichever is better.
-		</br>Face cards are worth 10.
-		</br>Other cards are worth the card number.
-		</br>The hand is worth the sum of the cards in it.
-		</br>Either player "busts" if the hand goes over 21.
-		</br>Highest score under 22 wins.
+		<br/>Aces are worth 1 or 11, whichever is better.
+		<br/>Face cards are worth 10.
+		<br/>Other cards are worth the card number.
+		<br/>The hand is worth the sum of the cards in it.
+		<br/>Either player "busts" if the hand goes over 21.
+		<br/>Highest score under 22 wins.
 	</p>
-	</br><h4>BattleShip</h4>
+	<br/><h4>BattleShip</h4>
 	<p>
 		The BattleShip program plays a game of battle ship.  A basic game might have 2 ships on a 5 x 5 grid.
 	</p>

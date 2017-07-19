@@ -198,7 +198,7 @@ double score = generator.nextDouble() * 10;</pre>
 <h3>int nextInt(int values)</h3>
 <p>
 	The nextInt() method works differently.  It requires one argument, which specifies the number of values that can be generated.  The lowest possible value is always 0.  The highest possible value is one less than the argument <code>values</code>.  
-</br>For example, if the argument is 2, then 2 different values can be generated (0, and 1).  If 6 is used as an input argument, there are 6 possible <code>return</code> values (0, 1, 2, 3, 4, 5).
+<br/>For example, if the argument is 2, then 2 different values can be generated (0, and 1).  If 6 is used as an input argument, there are 6 possible <code>return</code> values (0, 1, 2, 3, 4, 5).
 </p>
 <pre>
 int coinFlip = generator.nextInt(2);</pre>
@@ -353,38 +353,38 @@ static void Arrays.sort(double[] a)
 static void Arrays.sort(int[] a)
 static void Arrays.sort(String[] a)</pre>
 
-</br>
+<br/>
 <h4>int Arrays.binarySearch(int[] a, int key)</h4>
 <p>
 	The binarySearch() method returns the index of the argument key in the array a.  The array must be sorted before searching.  If the array has multiple matching values, any of their indices might be returned.  That is, this search algorithm is not guaranteed to find any particular element that matches.  
-</br>If no matching element can be found a negative number is returned.  The negative return value indicates the index where the key would be if it were in the array as –(position + 1).
+<br/>If no matching element can be found a negative number is returned.  The negative return value indicates the index where the key would be if it were in the array as –(position + 1).
 </p>
 
-</br>
+<br/>
 <h4>boolean Arrays.equals(int[] a1, int[] a2)</h4>
 <p>
 	The equals() method returns true if both arrays have the same number of elements, and they have the same values, in the same order.  That is, if all of the elements in <code>a1</code> are equal to the elements in <code>a2</code>.
 </p>
 
-</br>
+<br/>
 <h4>void Arrays.fill(int[] a, int value)</h4>
 <p>
 	The fill() method sets every element in the array to the value <code>value</code>.  The method does not return a new array.  It fills the existing array.
 </p>
 
-</br>
+<br/>
 <h4>void Arrays.fill(int[] a, int from, int to,int value)</h4>
 <p>
 	These versions of the fill() method fill only part of the array.  All of the elements from the index <code>from</code>, to but not including the index <code>to</code> are replaced by <code>value</code>.
 </p>
 
-</br>
+<br/>
 <h4>void Arrays.sort(int[] a)</h4>
 <p>
 	The sort() method sorts an array from smallest to largest.  All elements in the array are sorted, so the array should not have extra useless elements.  The method does not return a sorted array, it sorts the array <code>a</code>.
 </p>
 
-</br>
+<br/>
 <p>
 	The following example program uses some of the static Arrays methods.
 </p>
@@ -394,18 +394,18 @@ static void Arrays.sort(String[] a)</pre>
 <pre>
 int[] number = {7, 2, 9, 4, 1};	
 </pre>
-</br>
+<br/>
 <p>
 	Then it sorts the array.
 </p>
 <pre>Arrays.sort(number);</pre>
-</br>
+<br/>
 <p>Then it searches for the number 7. </p>
 <pre>int index = Arrays.binarySearch(number, 7)</pre>
-</br>
+<br/>
 <p>The returned index is used in the assignment statement so that the element containing 7 with be set to 5.</p>
 <pre>number[index] = 5;</pre>
-</br>
+<br/>
 <p>Finally, the array is filled with 3's.</p>
 <pre>Arrays.fill(number, 3);</pre>
 <pre>
@@ -719,7 +719,7 @@ Math.max(Arrays.binarySearch(b, x), 5);
 
 <div id="AssignmentPrograms">
 	<h3>Assignment Programs</h3>
-	</br>
+	<br/>
 	<h4>CoinFlip</h4>
 	<p>
 		This program asks the player to flip a coin.  The player chooses heads or tails, and the program tells the player if the guess was right or wrong.  The player is offered the opportunity to quit after each flip.
@@ -742,7 +742,7 @@ Play again? (y or n)
 <strong>n</strong>
 Press any key to continue . . .
 	</div>
-	</br>
+	<br/>
 	<h4>GuessANumber</h4>
 	<p>
 		This program generates a random integer between 1 and 100, including 1 and 100.  It asks the user to guess the number.  The user gets 10 guesses.  After each guess, the program tells the user if the guess was too high or too low.  If the user finds the number within the 10 guesses, the user wins.
@@ -758,7 +758,7 @@ What is your guess number 3?
 <strong>42</strong>
 Yes.  That is the answer.  You win!
 	</div>
-	</br>
+	<br/>
 	<h4>QuadraticEquation</h4>
 	<p>This program finds the solutions for second degree polynomials (quadratic equations).</p>
 	<p>ax<sup>2</sup> + bx + c = 0</p>
@@ -778,7 +778,7 @@ Please enter c:
 
 The solutions are -1 and 4
 	</div>
-	</br>
+	<br/>
 	<h4>RockPaperScissors</h4>
 	<p>
 		This game plays a game of rock paper scissors with you and keeps score.  For each turn, the player picks rock, paper, or scissors.  The computer randomly generates one of the three.  Scissors beat paper, rock beats scissors, and paper beats rock.  The last one is questionable, but that is how the game is played.  If the player and computer choose the same item, it's a tie.
@@ -806,32 +806,32 @@ Play again? (y or n): <strong>n</strong>
 
 Press any key to continue . . .
 	</div>
-	</br>
+	<br/>
 	<h4>SimpleDungeon</h4>
 	<p>
 		The player must take 10 steps to escape the dungeon.  On each step, the player might encounter a monster.  One third of the time, the player will encounter a gnome.  One third of the time, the player will encounter a dragon.  One third of the time, there will be no monster.
-		</br>If there is a monster, the player can choose to fight or run away.  If the player fights and wins, the player gets the monster's gold.
-		</br>The player starts with 10 hit points.  Each time the player is hit by a monster, the player loses hit points.  If the player's hit points reach 0 before escaping the dungeon, the game is over and the player loses.
-		</br>The player does 1 to 8 hit points of damage with each hit 
-		</br>Each gnome encountered starts with 3 hit points, has 1 to 5 gold, and does 1 to 2 hit points of damage each time it attacks..  
-		</br>Each dragon starts with 10 hit points, has 10 to 20 gold, and does 1 to 5 points of damage.
+		<br/>If there is a monster, the player can choose to fight or run away.  If the player fights and wins, the player gets the monster's gold.
+		<br/>The player starts with 10 hit points.  Each time the player is hit by a monster, the player loses hit points.  If the player's hit points reach 0 before escaping the dungeon, the game is over and the player loses.
+		<br/>The player does 1 to 8 hit points of damage with each hit 
+		<br/>Each gnome encountered starts with 3 hit points, has 1 to 5 gold, and does 1 to 2 hit points of damage each time it attacks..  
+		<br/>Each dragon starts with 10 hit points, has 10 to 20 gold, and does 1 to 5 points of damage.
 	</p>
 	<p>
 		Each encounter with a monster consists of a series of turns.  For each turn, the player can fight, or run away.  If the player chooses to fight, damage is calculated for the monster.  The monster retaliates and damage is calculated for the player.  Then, the next turn starts and the player may choose to fight or run away again.  If the player chooses to run away, they move one step closer to the dungeon exit without getting hurt, but without getting any gold.
 	</p>
 	<p>When the player escapes, the program displays the total gold collected. </p>
-	</br>
+	<br/>
 	<h4>Dungeon</h4>
 	<p>
 		The Dungeon game is full of monsters and fear, which leads to hate, which leads to anger, and gold…
-		</br>The player must take 5 to 10 steps (generated randomly) to escape the dungeon.  On each step, the player might encounter a monster.  One third of the time, the player will encounter a gnome.  One third of the time, the player will encounter a dragon.  One third of the time, there will be no monster.
-		</br>If there is a monster, the player can choose to fight or run away.  If the player fights and wins, the player gets the monster's gold.
-		</br>The player starts with 10 hit points.
-		</br>The player does 1 to 8 hit points of damage with each hit 
-		</br>Each gnome encountered starts with 2 to 4 hit points.  
-		</br>Each dragon starts with 8 to 12 hit points.
-		</br>The amount of gold a monster has varies between 0 and twice its original hit points.
-		</br>The amount of damage a monster does with each attack varies between 0 and half its starting hit points. 
+		<br/>The player must take 5 to 10 steps (generated randomly) to escape the dungeon.  On each step, the player might encounter a monster.  One third of the time, the player will encounter a gnome.  One third of the time, the player will encounter a dragon.  One third of the time, there will be no monster.
+		<br/>If there is a monster, the player can choose to fight or run away.  If the player fights and wins, the player gets the monster's gold.
+		<br/>The player starts with 10 hit points.
+		<br/>The player does 1 to 8 hit points of damage with each hit 
+		<br/>Each gnome encountered starts with 2 to 4 hit points.  
+		<br/>Each dragon starts with 8 to 12 hit points.
+		<br/>The amount of gold a monster has varies between 0 and twice its original hit points.
+		<br/>The amount of damage a monster does with each attack varies between 0 and half its starting hit points. 
 	</p>Sample Run
 	<div class="codeblock2">
 Welcome to the dungeon.  

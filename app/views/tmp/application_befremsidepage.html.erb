@@ -26,11 +26,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 </head>
-<!--<body background="images/bg4.jpg"> -->
 <body>
 <!-- ========================== Sidebar ======================== --> 
-<div>
-<!--  <div id="sidebar">
+  <div id="sidebar">
     <ul>
       <li><%= link_to "01 - Programming", chapter1_path %></li>
       <li><%= link_to "02 - Variables", chapter2_path %></li>
@@ -48,24 +46,24 @@
       <li><%= link_to "14 - Prorgamming with Classes", chapter14_path %></li>
     </ul>
   </div><!-- sidebar -->
-</div>
 <!-- ====================== End Sidebar ======================== -->  
 
 <!-- ======================= main content ====================== -->
-<div class="container">
-  <div class="jumbotron" style="background-color: #DAA520;">
-  <!--<div class="jumbotron">-->
-
+ <div id="main_content"> 
+ </br>
 
   <% flash.each do |name, msg| %>
     </br></br>
     <%= content_tag(:div, msg, class: "alert") %>
   <% end %> 
-
-  <%= yield %>
-
-  <%= render 'layouts/footer' %>
+  
+  <div id="page_wrapper">
+    <div id="content">
+      <%= yield %>
+    </div>
   </div>
+  <%= render 'layouts/footer' %>
+  
 </div><!-- main_content -->
 <!-- ==================== End main content ====================== --> 
 <!-- ========================= Menu Bar ========================= --> 

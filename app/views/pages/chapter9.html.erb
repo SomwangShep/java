@@ -131,7 +131,7 @@ String word = "characters";
 char letter = word.charAt(2);</pre>
 <p>These statements assign the character 'a' to the <code>char</code> variable <code>letter</code>.</p>
 <h3>
-String substring(int beginIndex)</br>
+String substring(int beginIndex)<br/>
 String substring(int beginIndex, int endIndex)
 </h3>
 <p>
@@ -149,7 +149,7 @@ String phrase = sentence.substring(3, 19);</pre>
 <p>After the statements above, the String <code>phrase</code> holds the text, "does say colonel".</p>
 
 <h3>
-int indexOf(String substring)</br>
+int indexOf(String substring)<br/>
 int indexOf(String substring, int beginIndex)
 </h3>
 
@@ -217,7 +217,7 @@ line = line.replaceAll("wong", "wrong");
 System.out.println(line);</pre>
 
 <h3>
-boolean startsWith(String s)</br>
+boolean startsWith(String s)<br/>
 boolean endsWith(String s)
 </h3>
 <p>
@@ -609,16 +609,16 @@ s3.charAt(s4.indexOf("e"))
 
 <div id="AssignmentPrograms">
 	<h3>Assignment Programs</h3>
-	</br>
+	<br/>
 	<h4>PasswordChecker</h4>
 	<p>
 		This program tests a suggested password for acceptability following the rules:
-		</br>A password must have between 6 and 12 characters.
-		</br>A password must contain at least one lowercase letter.
-		</br>A password must contain at least one uppercase letter.
-		</br>A password must contain at least one digit (number).
+		<br/>A password must have between 6 and 12 characters.
+		<br/>A password must contain at least one lowercase letter.
+		<br/>A password must contain at least one uppercase letter.
+		<br/>A password must contain at least one digit (number).
 	</p>
-	</br>
+	<br/>
 	<h4>RootMyText</h4>
 	<p>
 		This program asks the user to type a sentence.  It takes all of the digits in the sentence, takes the square root of each and adds them together.  Then it prints the whole number part to the console.
@@ -628,19 +628,19 @@ Please enter a sentence.
 <em>If you 8 what I 8 b4, you would go back to ba6 2.</em>
 I’ve processed your sentence, and derived the number 11.
 	</div>
-	</br>
+	<br/>
 	<h4>AnagramChecker</h4>
 	<p>
 		An anagram is a phrase made by rearranging the letters of another phrase.  Spaces punctuation and capitalization are ignored.  Examples are:
 	</p>
 	<p>
 		Eleven plus two  and  Twelve plus one
-		</br>A decimal point  and  I'm a dot in place
+		<br/>A decimal point  and  I'm a dot in place
 	</p>
 	<p>
 		This program must accept two Strings and determine if they are anagrams of each other.
 	</p>
-	</br>
+	<br/>
 	<h4>Hangman</h4>
 	<p>
 		This program contains ten eight-letter words for the user to guess at.  To make things simpler, you may choose ten words that have no redundant letters.  The program chooses one of these words and lets the user guess letters.  The user gets 15 guesses.  If the user guesses a letter that is in the word, that letter is filled in.

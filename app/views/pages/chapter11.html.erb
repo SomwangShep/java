@@ -96,35 +96,35 @@ private static void printWelcome()
 <p>
 	A method can be <code>public</code> or <code>private</code>.  <code>Private</code> methods can only be called from within the same <code>class</code>.  A method only needs to be <code>public</code> if it will be called from outside the <code>class</code>.  The methods in this program are all called from inside the class so they are all declared <code>private</code>.  If a method is not declared to be <code>public</code> or <code>private</code>, it becomes <code>public</code> by default.
 </p>
-</br>
+<br/>
 <p>
 	<code>Static</code> methods are called without creating <code>new</code> objects.  Within a <code>class static</code> methods can only call other <code>static</code> methods.  Since the methods in this program are all called from main(), which is <code>static</code>, they are all <code>static</code> as well.
 </p>
-</br>
+<br/>
 <p>
 	Values are <code>returned</code> using the <code>return</code> keyword.  The <code>return</code> type always directly precedes the method name in the method signature.  
 </p>
-</br>
+<br/>
 <p>
 	If a method does not <code>return</code> a value, a type of <code>void</code> is specified.  Otherwise, the type of value that will be <code>returned</code> must be specified.
 </p>
-</br>
+<br/>
 <p>
 	A method that has a <code>return</code> type other than <code>void</code> must <code>return</code> a value, and the value must be of the proper type.  A method can only <code>return</code> one value.
 </p>
-</br>
+<br/>
 <p>
 	Every method has a name that identifies it uniquely within a <code>class</code>.  The names for methods follow the same rules for naming variables.  
 </p>
-</br>
+<br/>
 <p>The first character must be a letter.  Other characters may be numbers.  </p>
-</br>
+<br/>
 <p>Spaces and other characters may not be used.  </p>
-</br>
+<br/>
 <p>
 	Both uppercase and lowercase are acceptable, but method names are case sensitive, so printOutput() and Printoutput() are two different method names.  
 </p>
-</br>
+<br/>
 <p>
 	By convention, method names start with a lowercase letter, and the first letter of each word should be capitalized.  
 </p>
@@ -163,23 +163,23 @@ private static void printWelcome()
 	When the method is called from main(), the code inside the method definition runs, and the method call is replaced by the <code>return</code> value, which is assigned to the variable <code>number</code>.
 </p>
 <p style="text-align: center;"><%= image_tag "c11_p5.jpg"%></p>  
-</br>
+<br/>
 <p>
 	When a <code>return</code> statement is encountered in a method, the method immediately exits, and <code>returns</code> to the calling method.  
 </p>
-</br>
+<br/>
 <p>
 	A method can contain multiple <code>return</code> statements.  The first one encountered will end the method execution and cause it to <code>return</code>.  
 </p>
-</br>
+<br/>
 <p>
 	A method that has a <code>return</code> type of void can still use the <code>return</code> keyword to force an exit from the method much as the <code>break</code> keyword ends a loop.
 </p>
-</br>
+<br/>
 <p>
 	A method can only <code>return</code> one value.  If the <code>return</code> type is not a primitive type, the value returned is actually a pointer to the <code>returned</code> object.  That means a new String or an array can be created inside a method and <code>returned</code>.  
 </p>
-</br>
+<br/>
 <p>
 	The method shown below creates a <code>new</code> array of 5 <code>ints</code>, initializes the elements to 5, and <code>returns</code> the array.  Note that the method signature <code>return</code> type is <code>int[]</code>.  In the main method, a reference variable is created for the <code>int</code> array, but an array is not created.  The reference variable is assigned to the array object created in and <code>returned</code> by the method definition.
 </p>
@@ -214,14 +214,14 @@ private static int square(<strong>int n</strong>)
 <p>
 	The method signature defines the type of the argument (int) and the name to be used within the method (n).  Inside the method, this name can be used just as any other variable.  However, the variable has "method scope", or "local scope".  It can only be seen from within its own method.  Methods can use their own variables without interference, even if the variables have the same names.
 </p>
-</br>
+<br/>
 <p>
 	When a primitive is passed to a method, the value is passed, but any changes made to that number, once it enters the method, are not reflected in the original variable.
 </p>
-</br>
+<br/>
 <p>
 	The following program creates an int called x and initializes it to 10.  The value of x is printed.  The value is passed to a method, which increments it to 11.  This value is printed.  When the method returns, the value of x is printed again.  It is still 10.
-</br>
+<br/>
 <pre>
 public static void main(String[] args)
 {
@@ -238,11 +238,11 @@ private static void method(int y)
 	System.out.println(y);
 }</pre>
 <p style="text-align: center;"><%= image_tag "c11_p7.jpg"%></p>
-</br>
+<br/>
 <p>
 	On the other hand, if the argument is not a primitive type, a pointer or reference to the original object is passed to the method.  That means any changes made to the passed object will be seen in the original object in main().  
 </p>
-</br>
+<br/>
 <p>
 	The following program creates an array in the main() method.  The values of the array elements are printed.  The array is passed to a second method, which changes the values.  When the method returns, the array values are printed again.  We see that the values have all changed in the original array.
 </p>
@@ -286,11 +286,11 @@ private static void doubler(int[] a)
 <p>
 	The trim() method in the String <code>class</code>, for example, does not alter the existing String object <code>sentence</code>.  It creates a <code>new</code> String object that has no whitespace on the ends, and <code>returns</code> it.  The reference variable must be assigned to the <code>return</code> value.  
 </p>
-</br>
+<br/>
 <p>
 	A method that changes the length of an array must create a <code>new</code> array and <code>return</code> a reference to the <code>new</code> array, since the length of the original array cannot change.  
 </p>
-</br>
+<br/>
 <p>
 	The lengthDoubler() method below takes an <code>int</code> array, and <code>returns</code> a <code>new</code> array with the same values, but twice the length.  The <code>new</code> elements are left at the default value of 0.
 </p>
@@ -447,9 +447,9 @@ answer = keyboard.nextInt();
 	This argument represents the level of difficulty for the question to be generated.  The method uses the following rules:
 </p>
 <p>
-Each question has two operands.</br>
-The operands are <code>ints</code>.</br>
-Both operands will have <code>level</code> digits.</br>
+Each question has two operands.<br/>
+The operands are <code>ints</code>.<br/>
+Both operands will have <code>level</code> digits.<br/>
 An asterisk (*) is placed between the operands.
 </p>
 <p>
@@ -654,7 +654,7 @@ public class MethodTester
 <!-- ========Worksheet and AssignmentPrograms================= -->
 <div id="AssignmentPrograms">
 	<h3>Assignment Programs</h3>
-	</br><h4>Calculator</h4>
+	<br/><h4>Calculator</h4>
 	<p>
 		The calculator program accepts strings such as "3 + 42" and "7 - 5", and calculates a solution.  The program completes the equation and the cursor moves to the next line to accept more input.  The user may type "quit" to end the program.
 	</p>
@@ -666,15 +666,15 @@ quit
 Press any key to continue . . .
 	</div>
 	
-	</br><h4>MathQuiz</h4>
+	<br/><h4>MathQuiz</h4>
 	<p>
 	The MathQuiz program generates a math quiz with addition, subtraction, multiplication, and/or division questions.  The user may choose any or all of the four question types.  The user may also choose the number of questions in the quiz and the level of difficulty.
-	</br>For addition and subtraction, the level is the number of digits in the operands.
-	</br>For multiplication, the first operand is level digits.  The second is one less, but at least one digit.
-	</br>For division, the first operand has one more digit than level.  The second has one less, but at least one digit.
-	</br>All numbers used (in questions and answers) are ints, so the division problems do not require a remainder as part of the answer.  The program keeps track of right and wrong answers and assigns a score at the end of the quiz.
+	<br/>For addition and subtraction, the level is the number of digits in the operands.
+	<br/>For multiplication, the first operand is level digits.  The second is one less, but at least one digit.
+	<br/>For division, the first operand has one more digit than level.  The second has one less, but at least one digit.
+	<br/>All numbers used (in questions and answers) are ints, so the division problems do not require a remainder as part of the answer.  The program keeps track of right and wrong answers and assigns a score at the end of the quiz.
 	
-	</br></br>The following method signatures are given as a guide.  The checkAnswer() method returns an int (0 or 1) to indicate whether the question was answered correctly or not.
+	<br/><br/>The following method signatures are given as a guide.  The checkAnswer() method returns an int (0 or 1) to indicate whether the question was answered correctly or not.
 	<p>
 	<div class="codeblock2">
 private static int generateAddition(int level)
@@ -714,7 +714,7 @@ The correct answer is 15
 You got 3 out of 4 right.
 That's a 75%.
 	</div>
-	</br><h4>ShoppingCart</h4>
+	<br/><h4>ShoppingCart</h4>
 	<p>
 		The ShoppingCart program lets you put things in a cart, take things out of the cart, and proceed to checkout.  The main() method starts by declaring a new String array with no elements (length 0).
 	</p>
